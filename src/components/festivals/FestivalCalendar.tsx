@@ -28,20 +28,42 @@ export const FestivalCalendar: React.FC<FestivalCalendarProps> = ({
     { code: 'DEC', name: 'December', hindi: 'पौष', season: 'winter' }
   ];
 
-  // Group festivals into months based on their monthIndex (0 to 11) or monthDisplay
+  // Group festivals into months based on their verified calendar placement
   const getFestivalsForMonth = (monthIndex: number) => {
     return festivals.filter(f => {
+      if (f.id === 'chhath-puja') {
+        // Kartik Chhath (Oct/Nov) and Chaiti Chhath (Mar/Apr)
+        return monthIndex === 9 || monthIndex === 10 || monthIndex === 2 || monthIndex === 3;
+      }
+      if (f.id === 'pitrapaksha-mela') {
+        // Bhadrapada to Ashwin (Sep/Oct)
+        return monthIndex === 8 || monthIndex === 9;
+      }
+      if (f.id === 'sonepur-mela') {
+        // Kartik Purnima through Margashirsha (Nov/Dec)
+        return monthIndex === 10 || monthIndex === 11;
+      }
+      if (f.id === 'prakash-parv') {
+        // Poush Shukla Saptami (Dec/Jan)
+        return monthIndex === 11 || monthIndex === 0;
+      }
+      if (f.id === 'rajgir-mahotsav') {
+        // Late November / early December
+        return monthIndex === 10 || monthIndex === 11;
+      }
+      if (f.id === 'karam-parva') {
+        // Bhadrapada (August/September)
+        return monthIndex === 7 || monthIndex === 8;
+      }
+      if (f.id === 'sufi-urs-maner') {
+        // Spring Shawwal commemoration (March/April)
+        return monthIndex === 2 || monthIndex === 3;
+      }
+      if (f.id === 'mithila-vivah-panchami') {
+        // Margashirsha Shukla Panchami (November/December)
+        return monthIndex === 10 || monthIndex === 11;
+      }
       if (f.monthIndex !== undefined) {
-        if (f.id === 'chhath-puja') {
-          // Celebrated in both Kartik (Oct/Nov) and Chaitra (March/April)
-          return monthIndex === 10 || monthIndex === 2;
-        }
-        if (f.id === 'prakash-parv') {
-          return monthIndex === 11 || monthIndex === 0;
-        }
-        if (f.id === 'sonepur-mela') {
-          return monthIndex === 10 || monthIndex === 11;
-        }
         return f.monthIndex === monthIndex;
       }
       return false;

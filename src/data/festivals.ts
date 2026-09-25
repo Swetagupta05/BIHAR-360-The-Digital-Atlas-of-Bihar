@@ -17,13 +17,13 @@ export const FESTIVALS_DATA: Festival[] = [
     atmosphereQuote: 'In the pre-dawn mist along the Ganga, when millions stand chest-deep in water holding woven bamboo baskets towards the crimson horizon, there is neither priest nor caste—only human devotion offering gratitude to the cosmic sun.',
     regions: ['Magadh', 'Mithila', 'Bhojpur', 'Anga', 'Across Bihar and Global Bihari Diaspora'],
     associatedDistricts: ['patna', 'gaya', 'vaishali', 'muzaffarpur', 'bhojpur', 'bhagalpur', 'madhubani', 'aurangabad', 'nalanda', 'buxar'],
-    prominence: 'The Supreme Mahaparva of Bihar — The World’s Only Vedic Sun Worship Celebrating Both Setting and Rising Sun',
-    overview: 'The supreme festival (Mahaparva) of Bihar, observed with uncompromising purity, penance, and devotion over four rigorous days. Rooted in ancient Vedic reverence for Surya (the Sun) and Chhathi Maiya (Usha, the first light of dawn), it is the only major festival in the world that worships the setting sun before worshipping the rising sun, symbolizing the cosmic cycle of life, renewal, and ecological gratitude.',
+    prominence: 'The Supreme Mahaparva of Bihar — An Ancient Living Solar Tradition Celebrating Both Setting and Rising Sun',
+    overview: 'The supreme festival (Mahaparva) of Bihar, observed with uncompromising purity, penance, and devotion over four rigorous days. Rooted in ancient Vedic reverence for Surya (the Sun) and Chhathi Maiya (Usha, the first light of dawn), it is a rare living tradition that worships the setting sun before worshipping the rising sun, symbolizing the cosmic cycle of life, renewal, and ecological gratitude.',
     description: 'Chhath is not a mere ritual; it is a four-day spiritual discipline of self-purification, family solidarity, and deep ecological harmony. The vratis (devotees, predominantly women) undertake a continuous 36-hour waterless fast while maintaining absolute cleanliness. The riverbanks and village ghats become egalitarian sanctuaries where social distinctions dissolve completely as everyone sweeps pathways, carries bamboo dauras, and stands side-by-side in sacred waters.',
     rituals: [
       'Day 1 - Nahay-Khay: Devotees bathe in sacred rivers or sanctified water, clean the household meticulously, and prepare a pure vegetarian meal of Kaddu-Bhat (bottle gourd cooked in pure cow ghee and Himalayan rock salt) served with Arwa rice in bronze or earthen utensils.',
       'Day 2 - Kharna (Lohanda): A day-long nirjala (waterless) fast. After sunset, the vrati prepares Rasiya (jaggery kheer made over mango wood fires in a brand-new earthen pot) and ghee-layered rotis. After offering this sacred prasad to the Sun God in solitary silence, the vrati partakes of it and commences an uninterrupted 36-hour fast without water.',
-      'Day 3 - Sandhya Arghya: In the golden glow of late afternoon, families accompany the vrati in solemn barefoot processions to river ghats, carrying woven bamboo dauras and brass/bamboo soops loaded with Thekua, sugarcane stalks, coconuts, and wild fruits. Devotees stand waist-deep in the water to offer the first Arghya to the Setting Sun (Pratyusha).',
+      'Day 3 - Sandhya Arghya: In the golden glow of late afternoon, families accompany the vrati in solemn barefoot processions to river ghats, carrying woven bamboo dauras and brass/bamboo soops loaded with Thekua, sugarcane stalks, coconuts, and wild fruits. Devotees stand waist-deep in the water to offer the first Arghya to the setting sun (Astaachalgami Surya).',
       'Day 4 - Usha Arghya & Parana: Long before dawn, devotees return to the riverbank under starlight. As the crimson rim of the Rising Sun (Usha) breaks across the water, offerings of raw milk and holy river water are made with devotional chants. The 36-hour fast concludes with Parana, drinking holy water and tasting ginger with jaggery.'
     ],
     ritualSequence: [
@@ -124,10 +124,11 @@ export const FESTIVALS_DATA: Festival[] = [
         hindiName: 'उलार सूर्य मंदिर',
         districtId: 'patna',
         districtName: 'Patna',
-        context: 'One of twelve ancient Sun shrines founded by Samba, featuring an ancient holy tank where thousands congregate.'
+        context: 'Associated in regional tradition with the twelve ancient solar shrines (Ark Kshetras), featuring a historic holy tank where thousands congregate.'
       }
     ],
     originsHistory: 'Historically referenced in the Rigveda, where solar hymns venerate Savitr and Surya as the visual embodiment of cosmic truth. The epic Mahabharata recounts that Karna, King of Anga (modern Bhagalpur/Munger), stood waist-deep in the Ganga each midday to offer prayers to his father Surya. Queen Draupadi is also described as observing this penance in the forest to regain the lost kingdom of the Pandavas.',
+    regionalVariation: 'Celebrated across all regions of Bihar, but with distinct local nuances: in Mithila, families often assemble around village pokharis (domestic lotus ponds) decorated with white rice-paste Aripan motifs, and songs feature gentle Maithili cadences; in Bhojpur and Saran, worship centers on the wide riverfronts of the Ganga and Gandak with resonant Bhojpuri folk geet; while in Magadh, historic sun temple kunds such as Deo (Aurangabad), Baragaon (Nalanda), and Ular (Patna) attract vast numbers for specific vows.',
     culturalSignificance: 'Chhath is uniquely democratic: there are no priestly intermediaries, no elaborate Sanskrit recitations required, and no temples necessary—the sanctum is the open sky and flowing water. Every devotee, rich or poor, prepares identical offerings in bamboo soops and cleans the public roads leading to the water.',
     significance: 'Celebrates solar energy, ecological water bodies, zero priest mediation (every individual prays directly to nature), and complete social equality on the ghats.',
     communityExperience: 'Entire villages and city neighborhoods mobilize weeks in advance. Volunteers sweep miles of approach roads barefoot, string fairy lights across alleys, set up community aid camps, and offer free milk and fruits to passing vratis.',
@@ -243,6 +244,7 @@ export const FESTIVALS_DATA: Festival[] = [
       }
     ],
     originsHistory: 'Derived from a legend recorded in the Skanda Purana: Sama, the daughter of Lord Krishna, was falsely accused of improper conduct by a court gossip named Chuda (Chugla). When a curse transformed her into a bird in the Himalayan forests, her devoted brother Samba underwent severe penance and restored her honor.',
+    regionalVariation: 'Strictly concentrated within the Mithila cultural belt (Madhubani, Darbhanga, Samastipur, Sitamarhi) and adjacent Maithili-speaking border regions. While not traditionally observed in southern Magadh or western Bhojpur, in Mithila villages it remains a defining nocturnal winter folk ritual where young women sculpt clay birds and sing under Kartik moonlight.',
     culturalSignificance: 'Beyond mythology, Sama-Chakeva demonstrates an extraordinary early ecological awareness. Ancient Mithila welcomed Himalayan and Central Asian migratory birds arriving in the wetlands every November, celebrating their arrival as divine avian guests rather than game to be hunted.',
     significance: 'Originates from the Skanda Purana story of Krishna’s daughter Sama and her brother Samba who defended her honor against false slander. Highlights deep environmental consciousness regarding migratory bird species.',
     communityExperience: 'Entire villages are united as sisters move from courtyard to courtyard. Even in modern times, emigrant sisters return home or receive parcels of clay and bird motifs from Mithila.',
@@ -356,6 +358,7 @@ export const FESTIVALS_DATA: Festival[] = [
       }
     ],
     originsHistory: 'Mentioned extensively in the Ramayana, where Sita performed Pind Daan using sand balls from the Falgu when Rama was away procuring supplies. Mentioned in the Mahabharata as Gayapuri, where the Pandavas visited during their exile.',
+    regionalVariation: 'While Hindus perform ancestral Shraddha ceremonies nationwide, Gaya holds the unique Vedic designation as the paramount tirtha where ancestral souls obtain permanent liberation (Moksha). The ritual is uniquely anchored in Gaya’s geographical reality: the subterranean sands of the Falgu River, the 45 ancient Vedis, the basalt Vishnupad footprint, and the genealogical registry maintained over generations by the hereditary Gayawal Pandas.',
     culturalSignificance: 'A profound cultural manifestation of filial gratitude (Pitru Rin) transcending generations. Families trace lineage records spanning centuries, renewing an unbroken thread of memory across time.',
     significance: 'Sanctified in the Garuda Purana and Ramayana. It is believed that performing Pind Daan in Gaya frees ancestors from the cycle of rebirth and attains Moksha.',
     communityExperience: 'The district administration sets up tent cities, medical camps, and multi-lingual pilgrim assistance centers as over 500,000 visitors arrive from every state in India and over 30 countries.',
@@ -363,7 +366,7 @@ export const FESTIVALS_DATA: Festival[] = [
     source: 'Gaya District Administration & Archaeological Survey of India',
     sourcesDetail: {
       primary: 'District Administration Gaya & Gayawal Panda Sabha Historical Records',
-      secondary: 'Gaya and the Gaya Pitas, Dr. L.P. Vidyarthi (Anthropological classic)',
+      secondary: 'The Sacred Complex in Hindu Gaya, Prof. L.P. Vidyarthi (1961)',
       institutionalAuthority: 'Bihar State Tourism Development Corporation'
     },
     multilingual: {
@@ -461,6 +464,7 @@ export const FESTIVALS_DATA: Festival[] = [
       }
     ],
     originsHistory: 'Originates in ancient Vedic lore described in the Bhagavata Purana (Gajendra Moksha legend). Historically attested during the Mauryan period, Mughal times (under Akbar and Jahangir for military elephant procurement), and the British Raj as the premier horse trading market of Northern India.',
+    regionalVariation: 'Geographically situated in Saran district at the confluence of the Gandak and Ganga across from Patna, the fair functions as an expansive cultural bridge uniting North Bihar (Tirhut and Saran divisions) with South Bihar and the wider northern Indian pastoral belt. The dialect, folk theater (Nautanki), and culinary atmosphere are predominantly Bhojpuri and Magahi.',
     culturalSignificance: 'A rare living intersection of ancient mythology, agrarian economics, and rural folk entertainment where urban and rustic Bihar mingle freely for a month.',
     significance: 'Historical roots tracing back to Chandragupta Maurya who purchased war elephants and cavalry horses here. Celebrates the mythological Gajendramoksha legend where Lord Vishnu rescued the elephant king from a crocodile.',
     communityExperience: 'Generations of families pitch tents along the sandy riverbanks, treating the fair as an annual winter reunion. Artists, musicians, and traders travel from as far as Rajasthan, Punjab, and Bengal.',
@@ -566,6 +570,7 @@ export const FESTIVALS_DATA: Festival[] = [
       }
     ],
     originsHistory: 'Rooted in Vedic astronomical observations of the winter solstice and the sun’s northward celestial movement (Uttarayan). Celebrated across ancient Magadh as an agrarian Thanksgiving festival.',
+    regionalVariation: 'Marked by distinct culinary focal points across Bihar’s cultural territories: in Magadh (Gaya and Patna), the beaten sesame confectionery of Gaya Tilkut and the evening community Khichdi with its "four friends" (dahi, papad, ghee, achar) are mandatory; in Mithila, aromatic Katarni Chura with thick clay-pot curd and fresh date-palm jaggery leads the day; in Rajgir, celebration centers on early morning holy dips in the 42°C natural sulfur hot springs of Brahmakund.',
     culturalSignificance: 'Symbolizes warm social bonds, forgiveness of past grievances, and communal sharing of the new harvest across social strata.',
     significance: 'Marks the harvest season, solar transition into Capricorn (Makar), and community solidarity through shared seasonal cuisine.',
     communityExperience: 'Sankranti transcends all divisions: street corners are crowded with makeshift wood stoves where fresh Tilkut and Lai are hammered out, and families share plates across adjoining rooftops.',
@@ -678,6 +683,7 @@ export const FESTIVALS_DATA: Festival[] = [
       }
     ],
     originsHistory: 'Commemorates the birth of Gobind Rai (later Guru Gobind Singh) in Patna in 1666 to Guru Tegh Bahadur Ji and Mata Gujri. The Guru spent his formative childhood years in Patna before moving to Anandpur Sahib in Punjab.',
+    regionalVariation: 'Centered in the historical quarters of Patna City (Patna Sahib), the celebration carries a unique local syncretic flavor where local Bihari Hindu, Muslim, and Sikh communities jointly offer warm drinking water and flower showers to passing Prabhat Pheris, and district administrative authorities erect monumental tent cities across Gandhi Maidan and Bypass.',
     culturalSignificance: 'A historic testament to Bihar’s foundational role in Sikh spiritual heritage. Showcases the profound tradition of universal service (Seva) and hospitality.',
     significance: 'Commemorates the birth anniversary of the tenth Sikh Guru at Takht Sri Patna Sahib, celebrated with monumental Nagar Kirtan and universal Langar.',
     communityExperience: 'The Bihar Government and Patna district authorities erect massive temporary tent cities (tent cities at Gandhi Maidan and Bypass) to accommodate hundreds of thousands of overseas and national pilgrims, providing free transport and citywide welcome centers.',
@@ -787,6 +793,7 @@ export const FESTIVALS_DATA: Festival[] = [
       }
     ],
     originsHistory: 'Historically documented in Buddhist canonical texts (Tripitaka) and the rock edicts of Emperor Ashoka, who visited Bodh Gaya in 260 BCE to worship the Bodhi Tree and establish the first commemorative shrine.',
+    regionalVariation: 'While observed across Buddhist holy sites in Bihar—including the Licchavi relic stupa in Vaishali and the World Peace Pagoda in Rajgir—Bodh Gaya is the peerless global epicentre where international sanghas from Sri Lanka, Thailand, Myanmar, Tibet, Japan, and Bhutan bring their specific monastic traditions, chanting styles, and butter lamp ceremonies into unified harmony.',
     culturalSignificance: 'A living testament to Bihar’s gift of philosophical enlightenment, non-violence, and mindfulness to global civilization.',
     significance: 'The supreme celebration of the Buddha’s birth, enlightenment, and parinirvana, turning Bodh Gaya into a serene global sanctuary.',
     communityExperience: 'Monasteries representing twenty different nations open their doors, distributing free meals, bottled water, and blessings to local villagers and global travelers.',
@@ -864,6 +871,7 @@ export const FESTIVALS_DATA: Festival[] = [
       }
     ],
     originsHistory: 'Historically inspired by the royal cultural councils hosted in Rajgriha by Kings Bimbisara and Ajatashatru in the 6th century BCE, where philosophers, poets, and musicians were patronized.',
+    regionalVariation: 'Held against the rugged backdrop of the seven ancient hills of Rajgir in Nalanda district, the festival specifically blends national classical music and dance recitals with authentic Magadhan vernacular traditions, such as horse-drawn carriage (Tonga) competitions and rural wrestling (Dangal).',
     culturalSignificance: 'Celebrates the syncretic meeting point of Buddhism, Jainism, Hinduism, and Sufism woven into the historic landscape of Rajgir.',
     significance: 'Organized by Bihar Tourism to celebrate the rich syncretic heritage of Buddhism, Jainism, Hinduism, and Sikhism intertwined in the ancient capital of Magadh.',
     image: VERIFIED_IMAGES.nalanda,
@@ -940,6 +948,7 @@ export const FESTIVALS_DATA: Festival[] = [
       }
     ],
     originsHistory: 'An indigenous folk tradition pre-dating written annals, chronicled in oral tribal and rural folklore. It celebrates the story of two brothers, Karma and Dharma, showing that sincere labor in harmony with nature brings prosperity while neglect leads to poverty.',
+    regionalVariation: 'Exclusively centered in the hilly forest and undulating plateau districts of southern Bihar (Rohtas, Kaimur, Banka, and Jamui). Distinct from the alluvial plains festivals of North Bihar, the rituals here revolve around the sacred Karam tree branch, village akharas, germinated Jawa grains, and the resonant rhythm of Mandar percussion.',
     culturalSignificance: 'A profound environmental tradition reminding society that human wellbeing is inextricably bound to the preservation of green forests and water sources.',
     significance: 'Celebrates ecological balance, the sanctity of trees, agricultural germination, and family bonding in southern Bihar.',
     image: VERIFIED_IMAGES.sikkiCraft,
@@ -1016,6 +1025,7 @@ export const FESTIVALS_DATA: Festival[] = [
       }
     ],
     originsHistory: 'Dates back to the 13th and 14th centuries CE, commemorating the spiritual lives of Makhdoom Yahya Maneri and his son Makhdoom Sharfuddin, whose letters (Maktubat-e-Sadi) influenced medieval Indian philosophy.',
+    regionalVariation: 'Centered primarily in the ancient river port of Maner Sharif (Patna) and the medieval Islamic center of Bihar Sharif (Nalanda), uniting devotees of both Hindu and Muslim backgrounds across Central Bihar. The culinary hallmark is the famous orange-golden pure ghee Maner ka Motichoor Laddoo.',
     culturalSignificance: 'A cornerstone of Bihar’s syncretic Ganga-Jamuni tehzeeb, where Hindu and Muslim families jointly participate in prayers, music, and social service.',
     significance: 'Celebrates the 700-year syncretic Sufi tradition of love, spiritual harmony, and devotional qawwali in historical river towns.',
     image: VERIFIED_IMAGES.sherShahTomb, // Authentic heritage stone architecture fallback
@@ -1093,7 +1103,8 @@ export const FESTIVALS_DATA: Festival[] = [
       }
     ],
     originsHistory: 'Derived from the Ramayana of Valmiki and the Adhyatma Ramayana, recalling King Janaka’s Dhanush Yajna in Mithila where Rama stringed the mighty bow of Shiva (Pinaka) and won the hand of Sita.',
-    culturalSignificance: 'Illuminates the matriarchal reverence and pride of Mithila, where Sita is the daughter of the soil and Rama is an affectionate member of the extended family.',
+    regionalVariation: 'Deeply distinct from celebrations in Ayodhya: in the Mithila cultural sphere (Sitamarhi, Madhubani, Darbhanga, and border Janakpur), Lord Rama is not revered with formal awe, but humorously welcomed and teased as the village son-in-law (Pahun) with satirical Gali geet, Maithili Aripan floor motifs, and Kohbar bridal murals.',
+    culturalSignificance: 'Illuminates the deep cultural veneration for daughters and women in Mithila tradition, where Sita is the daughter of the soil and Rama is an affectionate member of the extended family.',
     significance: 'Celebrates the legendary wedding of Sita and Rama through authentic Mithila folk rituals, Kohbar art, and traditional wedding songs.',
     image: VERIFIED_IMAGES.madhubani,
     source: 'Mithila Sanskritik Parishad & Department of Art and Culture, Bihar',

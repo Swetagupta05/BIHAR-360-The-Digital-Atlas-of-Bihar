@@ -47,10 +47,10 @@ export const ChhathStory: React.FC<ChhathStoryProps> = ({
       day: 'DAY 3',
       titleEn: 'Sandhya Arghya',
       titleHi: 'संध्या अर्घ्य (डूबते सूर्य की उपासना)',
-      subtitle: 'The World’s Only Sunset Worship',
+      subtitle: 'Worship of the Setting Sun (Astaachalgami Surya)',
       icon: Sun,
       ritualSummary:
-        'In the golden late afternoon, barefoot processions stream toward riverbanks and ponds. Men carry woven bamboo Dauras on their heads while women sing timeless folk geet. Devotees stand chest-deep in flowing water holding brass or bamboo soops filled with Thekua, sugarcane stalks, and coconuts, offering reverence to the setting sun (Pratyusha).',
+        'In the golden late afternoon, barefoot processions stream toward riverbanks and ponds. Men carry woven bamboo Dauras on their heads while women sing timeless folk geet. Devotees stand chest-deep in flowing water holding brass or bamboo soops filled with Thekua, sugarcane stalks, and coconuts, offering reverence to the setting sun (Astaachalgami Surya).',
       foodFocus: 'Thekua, Sugarcane, Seasonal Harvest',
       significance: 'Gratitude to the receding sun, recognizing that the setting sun will rise again tomorrow.'
     },
@@ -146,10 +146,10 @@ export const ChhathStory: React.FC<ChhathStoryProps> = ({
             <div className="p-3.5 rounded-xl bg-white dark:bg-[#1E2227] border border-[#EADBCE] dark:border-[#2E343B] space-y-1">
               <strong className="text-[#C85A32] dark:text-[#E06C43] font-semibold flex items-center gap-1.5">
                 <Shield className="w-4 h-4" />
-                2. Zero Priest Mediation (Egalitarian Purity)
+                2. Direct Worship without Intermediaries
               </strong>
               <p className="text-[#5A524A] dark:text-[#C8BFB4] leading-relaxed">
-                There are no mantras reserved for an elite class. Every individual is their own priest, directly facing the open sun and pouring water with their own hands.
+                The rituals are performed directly by the vrati and family members standing in the water, offering prayers directly to the cosmic sun without requiring priestly intermediaries on the ghats.
               </p>
             </div>
 
@@ -362,7 +362,7 @@ export const ChhathStory: React.FC<ChhathStoryProps> = ({
             </div>
 
             <div className="p-3.5 rounded-xl bg-amber-950/40 border border-amber-800/40 text-xs text-amber-200">
-              <strong>Living Heritage Note:</strong> These songs require no classical training—women sing in unamplified natural harmony, their voices carrying across the fog of the Ganga at 4:30 AM.
+              <strong>Living Heritage Note:</strong> These songs require no classical training—women sing in unamplified natural harmony, their voices carrying across the morning mist along rivers and water bodies at dawn.
             </div>
           </div>
         </div>

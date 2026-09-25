@@ -139,6 +139,30 @@ export const FeaturedFestival: React.FC<FeaturedFestivalProps> = ({
             <p className="text-xs sm:text-sm text-[#4A453E] dark:text-[#C8BFB4] leading-relaxed font-sans line-clamp-3">
               {festival.overview || festival.description}
             </p>
+
+            {/* Why It Matters */}
+            {festival.significance && (
+              <div className="p-3 rounded-xl bg-amber-50/70 dark:bg-amber-950/20 border border-amber-200/60 dark:border-amber-900/40 text-xs text-[#5A524A] dark:text-[#C8BFB4] space-y-0.5">
+                <span className="text-[#C85A32] dark:text-[#E06C43] font-mono uppercase text-[10px] tracking-wider font-semibold block">
+                  {language === 'hi' ? 'महत्व एवं दर्शन (Why It Matters)' : 'Why It Matters'}
+                </span>
+                <p className="line-clamp-2 leading-relaxed text-[11px] sm:text-xs">
+                  {festival.significance}
+                </p>
+              </div>
+            )}
+
+            {/* Regional Variation where documented */}
+            {festival.regionalVariation && (
+              <div className="p-3 rounded-xl bg-[#F0F4F8] dark:bg-[#1A222C] border border-[#D0DCE7] dark:border-[#2A3B4D] text-xs text-[#334155] dark:text-[#CBD5E1] space-y-0.5">
+                <span className="text-[#1D4ED8] dark:text-[#60A5FA] font-mono uppercase text-[10px] tracking-wider font-semibold block">
+                  {language === 'hi' ? 'क्षेत्रीय विविधता एवं संदर्भ (Regional Context)' : 'Regional Variation & Context'}
+                </span>
+                <p className="line-clamp-2 leading-relaxed text-[11px] sm:text-xs">
+                  {festival.regionalVariation}
+                </p>
+              </div>
+            )}
           </div>
 
           {/* "How it is Observed" — Sequential Ritual Timeline */}

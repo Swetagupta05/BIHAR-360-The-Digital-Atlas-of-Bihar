@@ -378,6 +378,18 @@ export const FestivalDetailModal: React.FC<FestivalDetailModalProps> = ({
             </div>
           )}
 
+          {/* Regional Context & Territorial Variation */}
+          {festival.regionalVariation && (
+            <div className="p-4 sm:p-5 rounded-2xl bg-[#F0F4F8] dark:bg-[#1A222C] border border-[#D0DCE7] dark:border-[#2A3B4D] space-y-1.5">
+              <strong className="text-xs uppercase tracking-wider font-mono text-[#1D4ED8] dark:text-[#60A5FA] block font-semibold">
+                {language === 'hi' ? 'क्षेत्रीय विविधता एवं संदर्भ' : 'Regional Context & Documented Variations'}
+              </strong>
+              <p className="text-xs sm:text-sm text-[#334155] dark:text-[#CBD5E1] leading-relaxed">
+                {festival.regionalVariation}
+              </p>
+            </div>
+          )}
+
           {/* Historical Origins & Social Significance */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {festival.originsHistory && (
@@ -416,6 +428,11 @@ export const FestivalDetailModal: React.FC<FestivalDetailModalProps> = ({
             {festival.sourcesDetail?.secondary && (
               <p className="text-[11px] leading-relaxed text-[#7A7065] dark:text-[#A89F93]">
                 <strong>Secondary Documentation:</strong> {festival.sourcesDetail.secondary}
+              </p>
+            )}
+            {festival.sourcesDetail?.institutionalAuthority && (
+              <p className="text-[11px] leading-relaxed text-[#7A7065] dark:text-[#A89F93]">
+                <strong>Institutional Authority:</strong> {festival.sourcesDetail.institutionalAuthority}
               </p>
             )}
           </div>

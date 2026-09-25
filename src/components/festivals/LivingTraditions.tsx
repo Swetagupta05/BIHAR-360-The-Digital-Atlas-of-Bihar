@@ -22,7 +22,7 @@ export const LivingTraditions: React.FC<LivingTraditionsProps> = ({
       icon: Music,
       image: VERIFIED_IMAGES.chhathPuja,
       description:
-        'In Bihar, festivals live in women’s voices. No festival requires an orchestra; rather, songs like Sohar (celebrating birth), Samdaun (farewell ballads), and Chhathi Maiya geet are passed down matrilineally across centuries, preserving dialect nuances and emotional memory without written scripts.',
+        'In Bihar, festivals live in women’s voices. No festival requires an orchestra; rather, songs like Sohar (celebrating birth), Samdaun (farewell ballads), and Chhathi Maiya geet are passed down through generations of women in family and community circles across centuries, preserving dialect nuances and emotional memory without written scripts.',
       highlight: 'Sung in natural unison without amplification at dawn along riverbanks.'
     },
     {
@@ -33,7 +33,7 @@ export const LivingTraditions: React.FC<LivingTraditionsProps> = ({
       icon: Palette,
       image: VERIFIED_IMAGES.madhubani,
       description:
-        'Before any ritual begins in Mithila and Bhojpur, the earth itself is consecrated. Women draw Aripan floor motifs using ground raw rice paste (Pithar) and vermilion, depicting lotus flowers, fish, and cosmic chakras. During weddings and Vivah Panchami, the Kohbar room is painted with protective flora and fauna.',
+        'Before rituals begin, the earth itself is consecrated: in Mithila, women create auspicious Aripan floor art using ground raw rice paste (Pithar) and vermilion, while in Bhojpur and Magadh, ceremonial Chowk patterns sanctify ritual courtyards. During weddings and Vivah Panchami in Mithila, the Kohbar room is painted with protective flora and fauna motifs.',
       highlight: 'Every line is drawn using bare fingers or bamboo twigs.',
       action: onExploreArtsTab ? { label: 'Explore Madhubani Art in Arts Section', onClick: onExploreArtsTab } : undefined
     },
@@ -80,7 +80,7 @@ export const LivingTraditions: React.FC<LivingTraditionsProps> = ({
       image: VERIFIED_IMAGES.pitrapaksha,
       description:
         'Melas in Bihar are the heartbeat of social cohesion. The month-long Sonepur cattle fair, the Gaya Pitrapaksha congregation, and local winter haats bring together farmers, artisans, performers, and travelers in an open-sky marketplace of culture, cattle trading, and folk theater.',
-      highlight: 'Living continuity of Mauryan-era trade routes and pastoral gatherings.'
+      highlight: 'Living continuity of historic pilgrim routes, river confluences, and pastoral gatherings.'
     }
   ];
 

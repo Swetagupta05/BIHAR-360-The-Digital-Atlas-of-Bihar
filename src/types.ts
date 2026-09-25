@@ -294,6 +294,7 @@ export interface Festival {
   musicTradition?: FestivalMusicTradition;
   sacredPlaces?: FestivalSacredPlace[];
   originsHistory?: string;
+  regionalVariation?: string;
   culturalSignificance?: string;
   significance?: string;
   communityExperience?: string;
