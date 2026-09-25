@@ -69,7 +69,7 @@ export const PlacesSection: React.FC<PlacesSectionProps> = ({
             <span>Sacred Sanctuaries & Ancient Geometry</span>
           </div>
 
-          <h2 className="text-3xl sm:text-5xl font-hindi-title text-[#14171A] leading-tight mb-2">
+          <h2 className="text-3xl sm:text-5xl font-hindi-title text-[#14171A] dark:text-[#F5F1E8] leading-tight mb-2">
             जहाँ बिहार आपको ले जाता है
           </h2>
 
@@ -81,7 +81,7 @@ export const PlacesSection: React.FC<PlacesSectionProps> = ({
         <button
           onClick={onNavigatePlaces}
           id="places-view-all-btn"
-          className="inline-flex items-center gap-2 text-sm font-semibold text-[#14171A] hover:text-[#C85A32] transition-colors self-start md:self-auto group"
+          className="inline-flex items-center gap-2 text-sm font-semibold text-[#14171A] dark:text-[#F5F1E8] hover:text-[#C85A32] transition-colors self-start md:self-auto group"
         >
           <span>Explore all pilgrimage & travel circuits</span>
           <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -94,7 +94,7 @@ export const PlacesSection: React.FC<PlacesSectionProps> = ({
           <div
             key={idx}
             onClick={onNavigatePlaces}
-            className="group rounded-3xl overflow-hidden bg-[#1E2124] border border-[#EADBCE]/60 flex flex-col justify-end min-h-[380px] p-6 sm:p-7 relative cursor-pointer shadow-sm hover:shadow-xl transition-all duration-300"
+            className="group rounded-3xl overflow-hidden bg-[#1E2124] border border-[#EADBCE]/60 dark:border-[#2E343B] flex flex-col justify-end min-h-[380px] p-6 sm:p-7 relative cursor-pointer shadow-sm hover:shadow-xl transition-all duration-300"
           >
             <img
               src={place.image}

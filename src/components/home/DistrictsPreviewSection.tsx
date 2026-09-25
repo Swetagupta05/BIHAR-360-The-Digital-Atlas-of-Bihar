@@ -23,7 +23,7 @@ export const DistrictsPreviewSection: React.FC<DistrictsPreviewSectionProps> = (
     .filter((d): d is District => Boolean(d));
 
   return (
-    <section className="py-20 sm:py-28 bg-[#F5EFE6] border-t border-[#EADBCE]/70">
+    <section className="py-20 sm:py-28 bg-[#F5EFE6] dark:bg-[#141619] border-t border-[#EADBCE]/70 dark:border-[#2E343B] transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
@@ -33,7 +33,7 @@ export const DistrictsPreviewSection: React.FC<DistrictsPreviewSectionProps> = (
               <span>38 Administrative & Cultural Territories</span>
             </div>
 
-            <h2 className="text-3xl sm:text-5xl font-hindi-title text-[#14171A] leading-tight mb-2">
+            <h2 className="text-3xl sm:text-5xl font-hindi-title text-[#14171A] dark:text-[#F5F1E8] leading-tight mb-2">
               38 ज़िले। 38 पहचानें। अनगिनत कहानियाँ।
             </h2>
 
@@ -41,7 +41,7 @@ export const DistrictsPreviewSection: React.FC<DistrictsPreviewSectionProps> = (
               Every District Has Its Own Soul
             </p>
 
-            <p className="text-sm text-[#4B525A] font-light leading-relaxed">
+            <p className="text-sm text-[#4B525A] dark:text-[#C8BFB4] font-light leading-relaxed">
               From the Himalayan sal groves of the north-west to the fertile Kosi marshes, the handlooms of Bhagalpur, and the granite hills of Magadh.
             </p>
           </div>
@@ -66,7 +66,7 @@ export const DistrictsPreviewSection: React.FC<DistrictsPreviewSectionProps> = (
               <div
                 key={district.id}
                 onClick={() => onSelectDistrict(district)}
-                className="bg-white rounded-3xl border border-[#EADBCE]/80 overflow-hidden shadow-2xs hover:shadow-xl transition-all duration-300 flex flex-col justify-between cursor-pointer group"
+                className="bg-white dark:bg-[#1A1D20] rounded-3xl border border-[#EADBCE]/80 dark:border-[#2E343B] overflow-hidden shadow-2xs hover:shadow-xl transition-all duration-300 flex flex-col justify-between cursor-pointer group"
               >
                 {/* Visual Header */}
                 <div className="relative h-48 w-full overflow-hidden bg-[#1E2124]">
@@ -129,27 +129,27 @@ export const DistrictsPreviewSection: React.FC<DistrictsPreviewSectionProps> = (
                 <div className="p-5 flex-1 flex flex-col justify-between space-y-3">
                   <div>
                     <div className="flex items-baseline justify-between mb-1">
-                      <h3 className="text-xl font-serif font-bold text-[#14171A] group-hover:text-[#C85A32] transition-colors">
+                      <h3 className="text-xl font-serif font-bold text-[#14171A] dark:text-[#F5F1E8] group-hover:text-[#C85A32] transition-colors">
                         {district.name}
                       </h3>
-                      <span className="text-base font-hindi-text text-[#8C5B3E] font-medium">
+                      <span className="text-base font-hindi-text text-[#8C5B3E] dark:text-[#E0A882] font-medium">
                         {district.hindiName}
                       </span>
                     </div>
 
-                    <div className="flex items-center gap-1 text-[11px] text-[#4B525A] mb-2 font-mono">
+                    <div className="flex items-center gap-1 text-[11px] text-[#4B525A] dark:text-[#9EA8B3] mb-2 font-mono">
                       <MapPin className="w-3 h-3 text-[#C85A32]" />
                       <span>HQ: {district.headquarters}</span>
                     </div>
 
-                    <p className="text-xs text-[#4B525A] font-light leading-relaxed line-clamp-3">
+                    <p className="text-xs text-[#4B525A] dark:text-[#C8BFB4] font-light leading-relaxed line-clamp-3">
                       {district.identityStatement || district.whyItMatters}
                     </p>
                   </div>
 
                   {/* Highlights and Action */}
-                  <div className="pt-3 border-t border-[#EADBCE]/60 flex items-center justify-between text-xs">
-                    <span className="text-[11px] text-[#8C5B3E] font-medium truncate max-w-[170px]">
+                  <div className="pt-3 border-t border-[#EADBCE]/60 dark:border-[#2E343B] flex items-center justify-between text-xs">
+                    <span className="text-[11px] text-[#8C5B3E] dark:text-[#E0A882] font-medium truncate max-w-[170px]">
                       {district.famousFor[0]}
                     </span>
                     <span className="font-semibold text-[#C85A32] flex items-center gap-1 group-hover:translate-x-0.5 transition-transform">

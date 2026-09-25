@@ -88,6 +88,61 @@ export interface District {
   sourceAttribution: SourceAttribution;
 }
 
+export interface RiverDetail {
+  id: string;
+  name: string;
+  hindiName: string;
+  origin: string;
+  confluence: string;
+  lengthInBiharKm?: number;
+  primaryDistricts: string[];
+  geographicRole: string;
+  culturalSignificance: string;
+  keyPlacesAlong: string[];
+  notableSpecies?: string[];
+  historicalContext?: string;
+  image: string;
+  sources: string[];
+}
+
+export type LandscapeCategory =
+  | 'All'
+  | 'Rivers & River Landscapes'
+  | 'Wetlands & Lakes'
+  | 'Forests & Wildlife'
+  | 'Hills & Rock Landscapes'
+  | 'Plains & Agricultural Landscapes'
+  | 'Caves & Geological Sites'
+  | 'Archaeological Landscapes'
+  | 'Sacred Landscapes';
+
+export interface LandscapePlace {
+  id: string;
+  name: string;
+  hindiName: string;
+  tagline: string;
+  category: 'Rivers & River Landscapes' | 'Wetlands & Lakes' | 'Forests & Wildlife' | 'Hills & Rock Landscapes' | 'Plains & Agricultural Landscapes' | 'Caves & Geological Sites' | 'Archaeological Landscapes' | 'Sacred Landscapes';
+  districtId: string;
+  districtName: string;
+  coordinates: { lat: number; lng: number };
+  image: string;
+  imageCaption?: string;
+  intro: string;
+  landscapeType: string;
+  whyItMatters: string;
+  historyNarrative?: string;
+  cultureAndTraditions?: string;
+  wildlifeAndEcology?: string;
+  thingsToSee: string[];
+  associatedPeopleIds?: string[];
+  associatedHeritageId?: string;
+  sacredTradition?: 'Buddhist' | 'Jain' | 'Hindu' | 'Sikh' | 'Sufi' | 'Multi-faith';
+  conservationStatus?: string;
+  sources: string[];
+  isFeatured?: boolean;
+  featuredRole?: 'lead' | 'supporting' | 'panoramic';
+}
+
 export interface Place {
   id: string;
   name: string;
@@ -155,6 +210,63 @@ export interface ArtForm {
   source: string;
 }
 
+export type FestivalSeason = 'winter' | 'spring' | 'summer' | 'monsoon' | 'autumn';
+export type FestivalTradition =
+  | 'all'
+  | 'chhath'
+  | 'hindu'
+  | 'sufi'
+  | 'sikh'
+  | 'buddhist'
+  | 'regional'
+  | 'harvest'
+  | 'folk';
+
+export interface FestivalRitualStep {
+  phase: number;
+  title: string;
+  hindiTitle?: string;
+  dayTag?: string;
+  description: string;
+  keyItems?: string[];
+}
+
+export interface FestivalFoodTradition {
+  name: string;
+  hindiName?: string;
+  description: string;
+  foodId?: string;
+  prasadContext?: string;
+}
+
+export interface FestivalMusicTradition {
+  title: string;
+  genre: string;
+  description: string;
+  famousLines?: string;
+  oralTradition?: string;
+}
+
+export interface FestivalSacredPlace {
+  name: string;
+  hindiName?: string;
+  districtId: string;
+  districtName: string;
+  context: string;
+}
+
+export interface FestivalMultilingual {
+  title?: { en?: string; hi?: string; bho?: string; mai?: string; mag?: string };
+  tagline?: { en?: string; hi?: string; bho?: string; mai?: string; mag?: string };
+  summary?: { en?: string; hi?: string; bho?: string; mai?: string; mag?: string };
+}
+
+export interface FestivalSources {
+  primary: string;
+  secondary?: string;
+  institutionalAuthority?: string;
+}
+
 export interface Festival {
   id: string;
   name: string;
@@ -164,18 +276,59 @@ export interface Festival {
   monthGregorian?: string;
   lunarTithi?: string;
   category?: string;
+  season?: FestivalSeason;
+  traditionCategory?: FestivalTradition;
+  monthDisplay?: string;
+  monthIndex?: number; // 0 to 11 for calendar placement
+  atmosphereQuote?: string;
   regions?: string[];
   associatedDistricts?: string[];
   prominence?: string;
   description?: string;
   overview?: string;
   rituals: string[];
+  ritualSequence?: FestivalRitualStep[];
   specialFoods?: string[];
+  foodTraditions?: FestivalFoodTradition[];
   songsAndMusic?: string;
+  musicTradition?: FestivalMusicTradition;
+  sacredPlaces?: FestivalSacredPlace[];
+  originsHistory?: string;
   culturalSignificance?: string;
   significance?: string;
+  communityExperience?: string;
   image: string;
   source?: string;
+  sourcesDetail?: FestivalSources;
+  multilingual?: FestivalMultilingual;
+}
+
+export interface HeritageLookCloserItem {
+  title: string;
+  focus: string; // e.g. 'Stucco Reliefs', 'Acoustic Cavity', 'Mirror Polish', 'Octagonal Geometry'
+  description: string;
+}
+
+export interface HeritageSiteDetail {
+  whyItMatters: string;
+  storyNarrative: string[];
+  whatRemains: string;
+  whyItMattersToday: string;
+  lookCloser: HeritageLookCloserItem[];
+  sources: {
+    primary: string;
+    secondary?: string;
+    designation: string; // e.g., 'UNESCO World Heritage Site (Ref 1502)' or 'ASI Protected Monument of National Importance'
+    surveyId?: string;
+  };
+  unescoDetails?: {
+    refNumber: string;
+    inscriptionYear: number;
+    criteria: string;
+  };
+  timelineEra: 'Mauryan' | 'Classical' | 'Pala-Buddhist' | 'Medieval' | 'Modern';
+  historicalPeriodYear: string;
+  relatedSiteIds: string[];
 }
 
 export interface HeritageSite {
@@ -200,6 +353,7 @@ export interface HeritageSite {
     bestTime: string;
     nearestHub: string;
   };
+  museumDoc?: HeritageSiteDetail;
 }
 
 export interface Dish {
@@ -217,13 +371,68 @@ export interface Dish {
   culturalContext: string;
 }
 
+export interface ArtCraftProcessStep {
+  step: number;
+  phase: 'Material' | 'Preparation' | 'Tools' | 'Technique' | 'Crafting' | 'Finished Art';
+  title: string;
+  hindiTitle?: string;
+  description: string;
+  toolOrMaterial?: string;
+}
+
+export interface ArtCraftMotif {
+  name: string;
+  hindiName?: string;
+  symbolism: string;
+  visualContext?: string;
+}
+
+export interface ArtPractitioner {
+  name: string;
+  hindiName?: string;
+  honor: string; // e.g. 'Padma Shri Awardee', 'National Award Winner'
+  artFormId: string;
+  region: string;
+  districtId?: string;
+  contribution: string;
+  source: string;
+}
+
+export interface CraftMaterial {
+  id: string;
+  name: string;
+  hindiName: string;
+  category: 'Natural Fiber' | 'Mineral & Plant Pigment' | 'Traditional Tool' | 'Raw Textile & Cocoon' | 'Natural Resin & Foil';
+  origin: string;
+  usedInArts: string[];
+  description: string;
+  extractionProcess: string;
+  sensoryTexture: string;
+}
+
+export interface ArtMultilingual {
+  title?: { en?: string; hi?: string; bho?: string; mai?: string; mag?: string; an?: string };
+  tagline?: { en?: string; hi?: string; bho?: string; mai?: string; mag?: string; an?: string };
+  culturalQuote?: { en?: string; hi?: string; bho?: string; mai?: string; mag?: string; an?: string };
+}
+
+export interface ArtSources {
+  primary: string;
+  institutionalAuthority?: string;
+  giRegistry?: string;
+  academicReference?: string;
+}
+
 export interface ArtCraft {
   id: string;
   name: string;
   hindiName: string;
+  tagline?: string;
   originRegion: string;
   districtId: string;
+  associatedDistricts?: string[];
   category: string;
+  categoryType?: 'painting' | 'textile' | 'fibre' | 'miniature';
   giTag: boolean;
   image: string;
   description: string;
@@ -231,7 +440,18 @@ export interface ArtCraft {
   techniques: string;
   materials: string[];
   masterArtisans: string[];
-  fiveStyles?: Array<{ name: string; description: string }>;
+  practitionersList?: ArtPractitioner[];
+  fiveStyles?: Array<{ name: string; description: string; context?: string }>;
+  motifs?: ArtCraftMotif[];
+  processSteps?: ArtCraftProcessStep[];
+  culturalMeaning?: string;
+  livingToday?: string;
+  contemporaryRevival?: string;
+  communityTradition?: string;
+  gallery?: string[];
+  relatedFestivals?: string[];
+  sources?: ArtSources;
+  multilingual?: ArtMultilingual;
 }
 
 export interface QuizQuestion {
@@ -268,7 +488,7 @@ export interface Personality {
   hindiName: string;
   slug?: string;
   era?: string;
-  eraPeriod?: string;
+  eraPeriod?: 'Ancient Bihar' | 'Medieval Bihar' | 'Colonial / Freedom Movement' | 'Modern Bihar' | 'Contemporary Bihar';
   field?: string;
   category?: string;
   bornDistrict?: string;
@@ -276,6 +496,21 @@ export interface Personality {
   lifeSpan?: string;
   title: string;
   biography: string;
+  shortContribution?: string;
+  featuredStoryIntro?: string;
+  isWomanVoice?: boolean;
+  whyPlaceMatters?: string;
+  languageAssociation?: {
+    language: string;
+    contribution: string;
+    keyWorkOrTradition: string;
+    region: string;
+  };
+  historicalConnection?: {
+    event: string;
+    period: string;
+    significance: string;
+  };
   majorContributions?: string[];
   majorAchievements?: string[];
   keyWorks?: string[];
@@ -283,6 +518,8 @@ export interface Personality {
   associatedPlaces?: string[];
   legacy?: string;
   image: string;
+  sources?: string[];
+  sourceAttribution?: string;
 }
 
 export interface NatureSpot {

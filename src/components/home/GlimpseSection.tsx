@@ -15,7 +15,7 @@ export const GlimpseSection: React.FC<GlimpseSectionProps> = ({ onNavigate }) =>
           <span>Visual Vignettes & Living Moments</span>
         </div>
         
-        <h2 className="text-3xl sm:text-5xl font-hindi-title text-[#14171A] leading-tight mb-2">
+        <h2 className="text-3xl sm:text-5xl font-hindi-title text-[#14171A] dark:text-[#F5F1E8] leading-tight mb-2">
           एक नज़र में बिहार
         </h2>
         
@@ -23,7 +23,7 @@ export const GlimpseSection: React.FC<GlimpseSectionProps> = ({ onNavigate }) =>
           A Glimpse of Bihar
         </p>
 
-        <p className="text-sm sm:text-base text-[#4B525A] font-normal leading-relaxed max-w-2xl">
+        <p className="text-sm sm:text-base text-[#4B525A] dark:text-[#C8BFB4] font-normal leading-relaxed max-w-2xl">
           A civilizational continuum where riverbanks hold ancient Vedic chants, clay hearths bake rations shared for millennia, and earthen courtyards turn women into visual philosophers.
         </p>
       </div>
@@ -33,7 +33,7 @@ export const GlimpseSection: React.FC<GlimpseSectionProps> = ({ onNavigate }) =>
         {/* Dominant Hero Vignette: Nalanda Mahavihara (7 cols on desktop) */}
         <div 
           onClick={() => onNavigate('heritage')}
-          className="lg:col-span-7 group relative rounded-3xl overflow-hidden bg-[#1E2124] min-h-[380px] sm:min-h-[480px] flex flex-col justify-end p-6 sm:p-10 cursor-pointer shadow-sm border border-[#EADBCE]/60 transition-all duration-300 hover:shadow-xl"
+          className="lg:col-span-7 group relative rounded-3xl overflow-hidden bg-[#1E2124] min-h-[380px] sm:min-h-[480px] flex flex-col justify-end p-6 sm:p-10 cursor-pointer shadow-sm border border-[#EADBCE]/60 dark:border-[#2E343B] transition-all duration-300 hover:shadow-xl"
         >
           <img
             src="/assets/images/nalanda_university_ruins_1789937702654.jpg"
@@ -67,7 +67,7 @@ export const GlimpseSection: React.FC<GlimpseSectionProps> = ({ onNavigate }) =>
           {/* Top Supporting Vignette: Litti Chokha & Clay Oven */}
           <div 
             onClick={() => onNavigate('cuisine')}
-            className="group relative rounded-3xl overflow-hidden bg-[#1E2124] min-h-[230px] sm:min-h-[250px] flex flex-col justify-end p-6 cursor-pointer shadow-sm border border-[#EADBCE]/60 transition-all duration-300 hover:shadow-lg"
+            className="group relative rounded-3xl overflow-hidden bg-[#1E2124] min-h-[230px] sm:min-h-[250px] flex flex-col justify-end p-6 cursor-pointer shadow-sm border border-[#EADBCE]/60 dark:border-[#2E343B] transition-all duration-300 hover:shadow-lg"
           >
             <img
               src="/assets/images/litti_chokha_bihar_1789937732927.jpg"
@@ -94,7 +94,7 @@ export const GlimpseSection: React.FC<GlimpseSectionProps> = ({ onNavigate }) =>
           {/* Bottom Supporting Vignette: Mithila Folk Art */}
           <div 
             onClick={() => onNavigate('arts')}
-            className="group relative rounded-3xl overflow-hidden bg-[#1E2124] min-h-[230px] sm:min-h-[250px] flex flex-col justify-end p-6 cursor-pointer shadow-sm border border-[#EADBCE]/60 transition-all duration-300 hover:shadow-lg"
+            className="group relative rounded-3xl overflow-hidden bg-[#1E2124] min-h-[230px] sm:min-h-[250px] flex flex-col justify-end p-6 cursor-pointer shadow-sm border border-[#EADBCE]/60 dark:border-[#2E343B] transition-all duration-300 hover:shadow-lg"
           >
             <img
               src="/assets/images/madhubani_mithila_painting_1789937745005.jpg"
@@ -125,7 +125,7 @@ export const GlimpseSection: React.FC<GlimpseSectionProps> = ({ onNavigate }) =>
         {/* Landscape Moment: Valmiki Tiger Reserve */}
         <div 
           onClick={() => onNavigate('circuits')}
-          className="group relative rounded-3xl overflow-hidden bg-[#1E2124] h-56 sm:h-64 flex flex-col justify-end p-6 cursor-pointer border border-[#EADBCE]/60 transition-all duration-300 hover:shadow-lg"
+          className="group relative rounded-3xl overflow-hidden bg-[#1E2124] h-56 sm:h-64 flex flex-col justify-end p-6 cursor-pointer border border-[#EADBCE]/60 dark:border-[#2E343B] transition-all duration-300 hover:shadow-lg"
         >
           <img
             src="/assets/images/valmiki_forest_champaran_1789938522457.jpg"
@@ -152,7 +152,7 @@ export const GlimpseSection: React.FC<GlimpseSectionProps> = ({ onNavigate }) =>
         {/* Sacred Waters Moment: Munger Ganga Fort */}
         <div 
           onClick={() => onNavigate('heritage')}
-          className="group relative rounded-3xl overflow-hidden bg-[#1E2124] h-56 sm:h-64 flex flex-col justify-end p-6 cursor-pointer border border-[#EADBCE]/60 transition-all duration-300 hover:shadow-lg"
+          className="group relative rounded-3xl overflow-hidden bg-[#1E2124] h-56 sm:h-64 flex flex-col justify-end p-6 cursor-pointer border border-[#EADBCE]/60 dark:border-[#2E343B] transition-all duration-300 hover:shadow-lg"
         >
           <img
             src="/assets/images/munger_fort_ganga_1789938550689.jpg"

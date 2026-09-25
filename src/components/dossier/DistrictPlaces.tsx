@@ -63,7 +63,7 @@ export const DistrictPlaces: React.FC<DistrictPlacesProps> = ({ district, langua
                       <Landmark className="w-3.5 h-3.5" />
                       <span>{place.tag || 'Heritage'}</span>
                     </span>
-                    <span className="text-[11px] font-mono text-[#A3988C] flex items-center gap-1">
+                    <span className="text-[11px] font-mono text-[#A3988C] dark:text-[#9EA8B3] flex items-center gap-1">
                       <MapPin className="w-3 h-3" />
                       <span>{district.name}</span>
                     </span>

@@ -171,13 +171,13 @@ export const DistrictsGrid: React.FC<DistrictsGridProps> = ({
       <section aria-label="Districts Directory">
         {filteredDistricts.length === 0 ? (
           /* Empty State */
-          <div className="text-center py-20 px-4 bg-[#F4EFE6] rounded-3xl border border-[#EADBCE] space-y-4">
+          <div className="text-center py-20 px-4 bg-[#F4EFE6] dark:bg-[#1A1D20] rounded-3xl border border-[#EADBCE] dark:border-[#2E343B] space-y-4 transition-colors">
             <Compass className="w-12 h-12 text-[#C85A32]/60 mx-auto" />
             <div className="space-y-1">
-              <h3 className="text-xl font-serif font-bold text-[#1E2124]">
+              <h3 className="text-xl font-serif font-bold text-[#1E2124] dark:text-[#F5F1E8]">
                 {language === 'hi' ? 'कोई ज़िला नहीं मिला' : 'No districts found'}
               </h3>
-              <p className="text-sm text-[#7A6B5D] max-w-md mx-auto">
+              <p className="text-sm text-[#7A6B5D] dark:text-[#C8BFB4] max-w-md mx-auto">
                 {language === 'hi'
                   ? 'खोज शब्द बदलकर देखें या क्षेत्रीय फ़िल्टर रीसेट करें।'
                   : 'Try searching with another name or reset your active filters.'}
@@ -216,20 +216,20 @@ export const DistrictsGrid: React.FC<DistrictsGridProps> = ({
               return (
                 <div key={reg.id} className="space-y-6">
                   {/* Region Chapter Header */}
-                  <div className="border-b border-[#EADBCE] pb-3 flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
+                  <div className="border-b border-[#EADBCE] dark:border-[#2E343B] pb-3 flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
                     <div>
                       <div className="flex items-center gap-2">
-                        <h2 className="font-serif font-bold text-2xl sm:text-3xl text-[#1E2124]">
+                        <h2 className="font-serif font-bold text-2xl sm:text-3xl text-[#1E2124] dark:text-[#F5F1E8]">
                           {reg.name}
                         </h2>
                         <span className="font-serif text-xl text-[#C85A32]">
                           {reg.hindiName}
                         </span>
-                        <span className="text-xs px-2.5 py-0.5 rounded-full bg-[#EADBCE] text-[#2D3238] font-bold">
+                        <span className="text-xs px-2.5 py-0.5 rounded-full bg-[#EADBCE] dark:bg-[#2E343B] text-[#2D3238] dark:text-[#F5F1E8] font-bold">
                           {regionDistricts.length} {regionDistricts.length === 1 ? 'District' : 'Districts'}
                         </span>
                       </div>
-                      <p className="text-xs sm:text-sm text-[#7A6B5D] mt-1 max-w-2xl">
+                      <p className="text-xs sm:text-sm text-[#7A6B5D] dark:text-[#C8BFB4] mt-1 max-w-2xl">
                         {reg.description}
                       </p>
                     </div>

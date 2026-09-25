@@ -61,7 +61,7 @@ export const TasteBiharSection: React.FC<TasteBiharSectionProps> = ({
             <span>Gastronomic Wisdom & Regional Terroir</span>
           </div>
           
-          <h2 className="text-3xl sm:text-5xl font-hindi-title text-[#14171A] leading-tight mb-2">
+          <h2 className="text-3xl sm:text-5xl font-hindi-title text-[#14171A] dark:text-[#F5F1E8] leading-tight mb-2">
             स्वाद से पहचानिए बिहार
           </h2>
           
@@ -73,7 +73,7 @@ export const TasteBiharSection: React.FC<TasteBiharSectionProps> = ({
         <button
           onClick={onNavigateCuisine}
           id="taste-view-all-btn"
-          className="inline-flex items-center gap-2 text-sm font-semibold text-[#14171A] hover:text-[#C85A32] transition-colors self-start md:self-auto group"
+          className="inline-flex items-center gap-2 text-sm font-semibold text-[#14171A] dark:text-[#F5F1E8] hover:text-[#C85A32] transition-colors self-start md:self-auto group"
         >
           <span>Explore all Bihari culinary traditions</span>
           <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -86,7 +86,7 @@ export const TasteBiharSection: React.FC<TasteBiharSectionProps> = ({
           <div
             key={idx}
             onClick={onNavigateCuisine}
-            className="group rounded-3xl overflow-hidden bg-white border border-[#EADBCE]/80 flex flex-col justify-between shadow-2xs hover:shadow-xl transition-all duration-300 cursor-pointer"
+            className="group rounded-3xl overflow-hidden bg-white dark:bg-[#1A1D20] border border-[#EADBCE]/80 dark:border-[#2E343B] flex flex-col justify-between shadow-2xs hover:shadow-xl transition-all duration-300 cursor-pointer"
           >
             {/* Food Image */}
             <div className="relative h-48 sm:h-52 w-full overflow-hidden bg-[#1E2124]">
@@ -107,21 +107,21 @@ export const TasteBiharSection: React.FC<TasteBiharSectionProps> = ({
             {/* Food Content */}
             <div className="p-5 flex-1 flex flex-col justify-between space-y-3">
               <div>
-                <span className="text-[10px] uppercase tracking-wider text-[#8C5B3E] font-mono block">
+                <span className="text-[10px] uppercase tracking-wider text-[#8C5B3E] dark:text-[#E0A882] font-mono block">
                   {food.origin}
                 </span>
-                <h3 className="text-base font-serif font-bold text-[#14171A] group-hover:text-[#C85A32] transition-colors mt-0.5">
+                <h3 className="text-base font-serif font-bold text-[#14171A] dark:text-[#F5F1E8] group-hover:text-[#C85A32] transition-colors mt-0.5">
                   {food.name}
                 </h3>
                 <h4 className="text-xs font-hindi-text text-[#C85A32] font-semibold">
                   {food.hindiName}
                 </h4>
-                <p className="text-xs text-[#4B525A] font-light leading-relaxed mt-2 line-clamp-3">
+                <p className="text-xs text-[#4B525A] dark:text-[#C8BFB4] font-light leading-relaxed mt-2 line-clamp-3">
                   {food.description}
                 </p>
               </div>
 
-              <div className="pt-2 border-t border-[#EADBCE]/50 flex items-center justify-between text-[11px] text-[#C85A32] font-semibold">
+              <div className="pt-2 border-t border-[#EADBCE]/50 dark:border-[#2E343B] flex items-center justify-between text-[11px] text-[#C85A32] font-semibold">
                 <span>View recipe & roots</span>
                 <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
               </div>

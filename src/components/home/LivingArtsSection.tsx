@@ -53,7 +53,7 @@ export const LivingArtsSection: React.FC<LivingArtsSectionProps> = ({
             <span>Living Traditions & Indigenous Crafts</span>
           </div>
 
-          <h2 className="text-3xl sm:text-5xl font-hindi-title text-[#14171A] leading-tight mb-2">
+          <h2 className="text-3xl sm:text-5xl font-hindi-title text-[#14171A] dark:text-[#F5F1E8] leading-tight mb-2">
             बिहार की जीवित कला
           </h2>
 
@@ -65,7 +65,7 @@ export const LivingArtsSection: React.FC<LivingArtsSectionProps> = ({
         <button
           onClick={onNavigateArts}
           id="arts-view-all-btn"
-          className="inline-flex items-center gap-2 text-sm font-semibold text-[#14171A] hover:text-[#C85A32] transition-colors self-start md:self-auto group"
+          className="inline-flex items-center gap-2 text-sm font-semibold text-[#14171A] dark:text-[#F5F1E8] hover:text-[#C85A32] transition-colors self-start md:self-auto group"
         >
           <span>Discover Bihar’s folk arts</span>
           <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -73,7 +73,7 @@ export const LivingArtsSection: React.FC<LivingArtsSectionProps> = ({
       </div>
 
       {/* Featured Masterpiece: Mithila Painting (Large Visual + Story) */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-[#F5EFE6] rounded-3xl p-6 sm:p-10 border border-[#EADBCE]/80 shadow-xs mb-8">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-[#F5EFE6] dark:bg-[#1A1D20] rounded-3xl p-6 sm:p-10 border border-[#EADBCE]/80 dark:border-[#2E343B] shadow-xs mb-8 transition-colors">
         <div className="lg:col-span-7 rounded-2xl overflow-hidden shadow-md bg-[#1E2124] relative h-72 sm:h-96">
           <img
             src="/assets/images/madhubani_mithila_painting_1789937745005.jpg"
@@ -90,18 +90,18 @@ export const LivingArtsSection: React.FC<LivingArtsSectionProps> = ({
             <span className="px-3 py-1 rounded-full bg-[#C85A32] text-white text-[10px] font-bold uppercase tracking-wider">
               GI Tag #31 Heritage
             </span>
-            <span className="text-xs text-[#8C5B3E] font-mono">Mithila Cultural Sphere</span>
+            <span className="text-xs text-[#8C5B3E] dark:text-[#E0A882] font-mono">Mithila Cultural Sphere</span>
           </div>
 
-          <h3 className="text-2xl sm:text-3xl font-serif font-bold text-[#14171A]">
+          <h3 className="text-2xl sm:text-3xl font-serif font-bold text-[#14171A] dark:text-[#F5F1E8]">
             Mithila (Madhubani) Painting
           </h3>
 
-          <h4 className="text-base font-hindi-text text-[#A54420]">
+          <h4 className="text-base font-hindi-text text-[#A54420] dark:text-[#E06C43]">
             मिथिला चित्रकला — दीवारों से वैश्विक कैनवास तक
           </h4>
 
-          <p className="text-xs sm:text-sm text-[#4B525A] font-light leading-relaxed">
+          <p className="text-xs sm:text-sm text-[#4B525A] dark:text-[#C8BFB4] font-light leading-relaxed">
             Originally created by women on the freshly plastered mud walls of bridal chambers (Kohbar) using crushed rice paste, lamp soot, and natural plant dyes. Every motif—fish for fertility, peacocks for beauty, lotus for purity—carries philosophical meaning.
           </p>
 
@@ -123,7 +123,7 @@ export const LivingArtsSection: React.FC<LivingArtsSectionProps> = ({
           <div
             key={idx}
             onClick={onNavigateArts}
-            className="group rounded-3xl bg-white border border-[#EADBCE]/80 overflow-hidden shadow-2xs hover:shadow-lg transition-all duration-300 cursor-pointer flex flex-col justify-between"
+            className="group rounded-3xl bg-white dark:bg-[#1A1D20] border border-[#EADBCE]/80 dark:border-[#2E343B] overflow-hidden shadow-2xs hover:shadow-lg transition-all duration-300 cursor-pointer flex flex-col justify-between"
           >
             <div className="relative h-48 w-full overflow-hidden bg-[#1E2124]">
               <img
@@ -141,21 +141,21 @@ export const LivingArtsSection: React.FC<LivingArtsSectionProps> = ({
 
             <div className="p-5 flex-1 flex flex-col justify-between space-y-2">
               <div>
-                <span className="text-[10px] text-[#8C5B3E] font-mono uppercase block">
+                <span className="text-[10px] text-[#8C5B3E] dark:text-[#E0A882] font-mono uppercase block">
                   {art.region}
                 </span>
-                <h4 className="text-base font-serif font-bold text-[#14171A] group-hover:text-[#C85A32] transition-colors mt-0.5">
+                <h4 className="text-base font-serif font-bold text-[#14171A] dark:text-[#F5F1E8] group-hover:text-[#C85A32] transition-colors mt-0.5">
                   {art.name}
                 </h4>
                 <div className="text-xs font-hindi-text text-[#C85A32]">
                   {art.hindiName}
                 </div>
-                <p className="text-xs text-[#4B525A] font-light leading-relaxed mt-2 line-clamp-3">
+                <p className="text-xs text-[#4B525A] dark:text-[#C8BFB4] font-light leading-relaxed mt-2 line-clamp-3">
                   {art.description}
                 </p>
               </div>
 
-              <div className="pt-3 border-t border-[#EADBCE]/60 flex items-center justify-between text-xs text-[#C85A32] font-semibold">
+              <div className="pt-3 border-t border-[#EADBCE]/60 dark:border-[#2E343B] flex items-center justify-between text-xs text-[#C85A32] font-semibold">
                 <span>View art form</span>
                 <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
               </div>

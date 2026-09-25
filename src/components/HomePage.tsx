@@ -39,7 +39,7 @@ export const HomePage: React.FC<HomePageProps> = ({
   };
 
   return (
-    <div className="w-full bg-[#FBF9F5] text-[#14171A]">
+    <div className="w-full bg-[#FBF9F5] dark:bg-[#0F1113] text-[#14171A] dark:text-[#F5F1E8] transition-colors duration-200">
       {/* 1. Hero Section */}
       <HeroSection
         onExplore={handleScrollToGlimpse}
@@ -84,7 +84,7 @@ export const HomePage: React.FC<HomePageProps> = ({
 
       {/* 9. Places That Stay With You ("जहाँ बिहार आपको ले जाता है") */}
       <PlacesSection
-        onNavigatePlaces={() => onNavigateTab('circuits')}
+        onNavigatePlaces={() => onNavigateTab('places')}
       />
 
       {/* 10. 38 Districts Preview ("38 ज़िले। 38 पहचानें। अनगिनत कहानियाँ।") */}

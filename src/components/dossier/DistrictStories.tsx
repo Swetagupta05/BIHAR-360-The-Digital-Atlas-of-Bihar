@@ -51,7 +51,7 @@ export const DistrictStories: React.FC<DistrictStoriesProps> = ({ district, lang
                 </span>
 
                 {story.source && (
-                  <span className="text-[11px] text-[#A3988C] font-serif italic">
+                  <span className="text-[11px] text-[#A3988C] dark:text-[#9EA8B3] font-serif italic">
                     Source: {story.source}
                   </span>
                 )}

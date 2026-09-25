@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --font-serif: "Playfair Display", Georgia, serif;
   --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
@@ -8,10 +10,12 @@
   --font-hindi-body: "Noto Serif Devanagari", serif;
 
   /* Refined Bihar 360 Color System */
-  --color-charcoal-950: #0F1113;
-  --color-charcoal-900: #14171A;
-  --color-charcoal-800: #1E2124;
-  --color-charcoal-700: #2D3238;
+  --color-charcoal-950: #0A0C0E;
+  --color-charcoal-900: #0F1113;
+  --color-charcoal-850: #16191D;
+  --color-charcoal-800: #1E2227;
+  --color-charcoal-750: #252A30;
+  --color-charcoal-700: #2E343B;
   --color-charcoal-600: #4B525A;
 
   --color-ivory-50: #FBF9F5;
@@ -38,23 +42,78 @@
   --color-goldaccent-light: #E0BA6A;
 }
 
-/* Custom subtle scrollbar */
+/* CSS Variables for Global Design System */
+:root {
+  --bg-primary: #FBF9F5;
+  --bg-secondary: #F5EFE6;
+  --bg-elevated: #FFFFFF;
+  --bg-card: #FFFFFF;
+  --bg-subtle: #F2ECE1;
+  --bg-overlay: rgba(20, 23, 26, 0.6);
+
+  --text-primary: #14171A;
+  --text-secondary: #4A4036;
+  --text-muted: #736B63;
+
+  --border-default: #EADBCE;
+  --border-subtle: #F0E6D8;
+  --border-focus: #C85A32;
+
+  --accent-terracotta: #C85A32;
+  --accent-terracotta-soft: rgba(200, 90, 50, 0.12);
+  --accent-ganga: #2C5D75;
+  --accent-green: #3E6550;
+  --accent-gold: #C49746;
+
+  --scrollbar-track: #F5EFE6;
+  --scrollbar-thumb: #D8C7B5;
+  --scrollbar-thumb-hover: #C85A32;
+}
+
+.dark {
+  --bg-primary: #0F1113;
+  --bg-secondary: #16191D;
+  --bg-elevated: #1F2329;
+  --bg-card: #1A1D22;
+  --bg-subtle: #252A30;
+  --bg-overlay: rgba(0, 0, 0, 0.75);
+
+  --text-primary: #F5F1E8;
+  --text-secondary: #C8BFB4;
+  --text-muted: #948B80;
+
+  --border-default: #2E343B;
+  --border-subtle: #242930;
+  --border-focus: #E06C43;
+
+  --accent-terracotta: #E06C43;
+  --accent-terracotta-soft: rgba(224, 108, 67, 0.18);
+  --accent-ganga: #4FA0C4;
+  --accent-green: #5CA47F;
+  --accent-gold: #E5BE6C;
+
+  --scrollbar-track: #16191D;
+  --scrollbar-thumb: #2E343B;
+  --scrollbar-thumb-hover: #E06C43;
+}
+
+/* Custom subtle theme-aware scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #F5EFE6;
+  background: var(--scrollbar-track);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #D8C7B5;
+  background: var(--scrollbar-thumb);
   border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #C85A32;
+  background: var(--scrollbar-thumb-hover);
 }
 
 /* Authentic editorial styling utilities */
@@ -69,4 +128,43 @@
 .subtle-grain {
   background-image: radial-gradient(rgba(30, 33, 36, 0.04) 1px, transparent 0);
   background-size: 24px 24px;
+}
+
+.dark .subtle-grain {
+  background-image: radial-gradient(rgba(245, 241, 232, 0.03) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Semantic Theme Helpers */
+.bg-theme-primary {
+  background-color: var(--bg-primary);
+}
+.bg-theme-secondary {
+  background-color: var(--bg-secondary);
+}
+.bg-theme-elevated {
+  background-color: var(--bg-elevated);
+}
+.bg-theme-card {
+  background-color: var(--bg-card);
+}
+.bg-theme-subtle {
+  background-color: var(--bg-subtle);
+}
+
+.text-theme-primary {
+  color: var(--text-primary);
+}
+.text-theme-secondary {
+  color: var(--text-secondary);
+}
+.text-theme-muted {
+  color: var(--text-muted);
+}
+
+.border-theme-default {
+  border-color: var(--border-default);
+}
+.border-theme-subtle {
+  border-color: var(--border-subtle);
 }

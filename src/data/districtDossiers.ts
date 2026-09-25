@@ -4,7 +4,7 @@ export interface DistrictStory {
   title: string;
   subtitle?: string;
   narrative: string;
-  tag: 'Heritage' | 'Literature' | 'Tradition' | 'Landscape' | 'Craft' | 'History';
+  tag: 'Heritage' | 'Literature' | 'Tradition' | 'Landscape' | 'Craft' | 'History' | 'Architecture';
   source?: string;
 }
 

@@ -38,7 +38,7 @@ export const DistrictCard: React.FC<DistrictCardProps> = ({
   return (
     <article
       id={`district-card-${district.slug}`}
-      className="group bg-[#FBF9F5] border border-[#EADBCE] hover:border-[#C85A32]/40 rounded-2xl overflow-hidden flex flex-col justify-between transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5"
+      className="group bg-[#FBF9F5] dark:bg-[#1A1D20] border border-[#EADBCE] dark:border-[#2E343B] hover:border-[#C85A32]/40 dark:hover:border-[#C85A32]/60 rounded-2xl overflow-hidden flex flex-col justify-between transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5"
     >
       <div>
         {/* Visual Hero Header */}
@@ -102,22 +102,22 @@ export const DistrictCard: React.FC<DistrictCardProps> = ({
           </div>
         ) : (
           /* High-Craft Cartographic Fallback for districts without verified photos */
-          <div className="relative h-52 w-full overflow-hidden bg-gradient-to-br from-[#F5EFE6] via-[#EFE5D8] to-[#E3D6C5] border-b border-[#EADBCE] p-4 flex flex-col justify-between">
+          <div className="relative h-52 w-full overflow-hidden bg-gradient-to-br from-[#F5EFE6] via-[#EFE5D8] to-[#E3D6C5] dark:from-[#1E2124] dark:via-[#252A30] dark:to-[#1A1D20] border-b border-[#EADBCE] dark:border-[#2E343B] p-4 flex flex-col justify-between">
             {/* Delicate Topographic Contour & Grid Background */}
             <div className="absolute inset-0 opacity-15 bg-[radial-gradient(#C85A32_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none" />
             
             {/* Faint watermark of Devanagari district initial */}
-            <div className="absolute -right-4 -bottom-4 font-serif text-8xl font-bold text-[#C85A32]/5 select-none pointer-events-none">
+            <div className="absolute -right-4 -bottom-4 font-serif text-8xl font-bold text-[#C85A32]/5 dark:text-white/5 select-none pointer-events-none">
               {district.hindiName.slice(0, 1)}
             </div>
 
             {/* Top Bar: Region Badge & Bookmark */}
             <div className="relative z-10 flex items-center justify-between">
               <div className="flex items-center gap-1.5">
-                <span className="px-2.5 py-1 rounded-full bg-[#1E2124] text-[#FBF9F5] text-[10px] font-bold uppercase tracking-wider">
+                <span className="px-2.5 py-1 rounded-full bg-[#1E2124] dark:bg-[#2C3138] text-[#FBF9F5] text-[10px] font-bold uppercase tracking-wider">
                   {district.region}
                 </span>
-                <span className="px-2 py-0.5 rounded-full bg-white/80 border border-[#EADBCE] text-[#7A6B5D] text-[9px] font-semibold flex items-center gap-1">
+                <span className="px-2 py-0.5 rounded-full bg-white/80 dark:bg-[#1E2124]/80 border border-[#EADBCE] dark:border-[#2E343B] text-[#7A6B5D] dark:text-[#C8BFB4] text-[9px] font-semibold flex items-center gap-1">
                   <Compass className="w-2.5 h-2.5 text-[#C85A32]" />
                   Atlas Record
                 </span>
@@ -132,7 +132,7 @@ export const DistrictCard: React.FC<DistrictCardProps> = ({
                 className={`p-2 rounded-full transition-all border ${
                   isBookmarked
                     ? 'bg-[#C85A32] text-white border-[#C85A32] shadow-sm'
-                    : 'bg-white hover:bg-[#F4EFE6] text-[#2D3238] border-[#EADBCE]'
+                    : 'bg-white dark:bg-[#252A30] hover:bg-[#F4EFE6] dark:hover:bg-[#2C3138] text-[#2D3238] dark:text-[#F5F1E8] border-[#EADBCE] dark:border-[#2E343B]'
                 }`}
                 aria-label={isBookmarked ? `Remove ${district.name} from saved` : `Save ${district.name}`}
                 title={isBookmarked ? 'Saved' : 'Save District'}
@@ -144,20 +144,20 @@ export const DistrictCard: React.FC<DistrictCardProps> = ({
             {/* Center Geographic & Typographic Identity */}
             <div className="relative z-10 my-auto text-center py-2">
               <div className="flex items-baseline justify-center gap-2.5">
-                <h3 className="font-serif font-bold text-2xl text-[#1E2124] tracking-tight">
+                <h3 className="font-serif font-bold text-2xl text-[#1E2124] dark:text-[#F5F1E8] tracking-tight">
                   {district.name}
                 </h3>
                 <span className="font-serif text-[#C85A32] text-xl font-medium">
                   {district.hindiName}
                 </span>
               </div>
-              <p className="text-xs text-[#7A6B5D] mt-1 font-medium">
+              <p className="text-xs text-[#7A6B5D] dark:text-[#9EA8B3] mt-1 font-medium">
                 HQ: {district.headquarters}
               </p>
             </div>
 
             {/* Subtle Cartographic Coordinates Note */}
-            <div className="relative z-10 flex items-center justify-center text-[10px] tracking-widest text-[#7A6B5D]/70 uppercase border-t border-[#EADBCE]/80 pt-1.5 font-mono">
+            <div className="relative z-10 flex items-center justify-center text-[10px] tracking-widest text-[#7A6B5D]/70 dark:text-[#9EA8B3]/70 uppercase border-t border-[#EADBCE]/80 dark:border-[#2E343B] pt-1.5 font-mono">
               <span>Cultural Geography of Bihar</span>
             </div>
           </div>
@@ -166,17 +166,17 @@ export const DistrictCard: React.FC<DistrictCardProps> = ({
         {/* Card Editorial Content */}
         <div className="p-5 space-y-3.5">
           {/* One-Line Identity Statement */}
-          <p className="text-[13px] text-[#2D3238] leading-relaxed line-clamp-3 font-normal">
+          <p className="text-[13px] text-[#2D3238] dark:text-[#C8BFB4] leading-relaxed line-clamp-3 font-normal">
             {identity}
           </p>
 
           {/* Known For Highlights */}
           {highlights.length > 0 && (
-            <div className="pt-2.5 border-t border-[#EADBCE]/70">
-              <span className="text-[10px] uppercase tracking-wider font-bold text-[#7A6B5D] block mb-1">
+            <div className="pt-2.5 border-t border-[#EADBCE]/70 dark:border-[#2E343B]">
+              <span className="text-[10px] uppercase tracking-wider font-bold text-[#7A6B5D] dark:text-[#9EA8B3] block mb-1">
                 Known For:
               </span>
-              <p className="text-xs font-semibold text-[#1E2124] leading-snug">
+              <p className="text-xs font-semibold text-[#1E2124] dark:text-[#F5F1E8] leading-snug">
                 {highlights.join(' • ')}
               </p>
             </div>
@@ -189,7 +189,7 @@ export const DistrictCard: React.FC<DistrictCardProps> = ({
         <button
           type="button"
           onClick={() => onSelectDistrict(district)}
-          className="w-full py-2.5 px-4 rounded-xl bg-white hover:bg-[#C85A32] text-[#1E2124] hover:text-white border border-[#EADBCE] hover:border-[#C85A32] text-xs font-bold transition-all duration-200 flex items-center justify-center gap-2 group/btn shadow-2xs hover:shadow-sm"
+          className="w-full py-2.5 px-4 rounded-xl bg-white dark:bg-[#252A30] hover:bg-[#C85A32] dark:hover:bg-[#C85A32] text-[#1E2124] dark:text-[#F5F1E8] hover:text-white dark:hover:text-white border border-[#EADBCE] dark:border-[#2E343B] hover:border-[#C85A32] dark:hover:border-[#C85A32] text-xs font-bold transition-all duration-200 flex items-center justify-center gap-2 group/btn shadow-2xs hover:shadow-sm"
           id={`explore-district-${district.slug}`}
         >
           <span>

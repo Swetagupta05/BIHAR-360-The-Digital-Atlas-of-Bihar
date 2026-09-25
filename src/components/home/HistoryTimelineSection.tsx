@@ -48,7 +48,7 @@ export const HistoryTimelineSection: React.FC<HistoryTimelineSectionProps> = ({
   ];
 
   return (
-    <section className="py-20 sm:py-28 bg-[#F5EFE6] border-y border-[#EADBCE]/70">
+    <section className="py-20 sm:py-28 bg-[#F5EFE6] dark:bg-[#141619] border-y border-[#EADBCE]/70 dark:border-[#2E343B] transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
@@ -57,7 +57,7 @@ export const HistoryTimelineSection: React.FC<HistoryTimelineSectionProps> = ({
               <History className="w-3.5 h-3.5" />
               <span>Epochs of Civilizational Thought</span>
             </div>
-            <h2 className="text-3xl sm:text-5xl font-hindi-title text-[#14171A] leading-tight mb-2">
+            <h2 className="text-3xl sm:text-5xl font-hindi-title text-[#14171A] dark:text-[#F5F1E8] leading-tight mb-2">
               बिहार — समय के पार
             </h2>
             <p className="text-xl sm:text-2xl font-serif text-[#C85A32] italic">
@@ -68,7 +68,7 @@ export const HistoryTimelineSection: React.FC<HistoryTimelineSectionProps> = ({
           <button
             onClick={onNavigateHistory}
             id="history-view-all-btn"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-[#14171A] hover:text-[#C85A32] transition-colors self-start md:self-auto group"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-[#14171A] dark:text-[#F5F1E8] hover:text-[#C85A32] transition-colors self-start md:self-auto group"
           >
             <span>Explore Bihar’s full history</span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -78,7 +78,7 @@ export const HistoryTimelineSection: React.FC<HistoryTimelineSectionProps> = ({
         {/* 2-Column Editorial Showcase: Visual on left, Interactive Vertical Timeline on right */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           {/* Visual Column */}
-          <div className="lg:col-span-5 relative rounded-3xl overflow-hidden shadow-lg border border-[#EADBCE] bg-[#1E2124]">
+          <div className="lg:col-span-5 relative rounded-3xl overflow-hidden shadow-lg border border-[#EADBCE] dark:border-[#2E343B] bg-[#1E2124]">
             <img
               src="/assets/images/mahabodhi_temple_gaya_1789937719331.jpg"
               alt="Mahabodhi Temple shikhara at Bodh Gaya where the Buddha sat under the sacred Bodhi tree"
@@ -108,24 +108,24 @@ export const HistoryTimelineSection: React.FC<HistoryTimelineSectionProps> = ({
                 className="relative group transition-all duration-200"
               >
                 {/* Timeline node */}
-                <div className="absolute -left-[31px] sm:-left-[39px] top-1 w-3.5 h-3.5 rounded-full bg-[#F5EFE6] border-2 border-[#C85A32] group-hover:scale-125 group-hover:bg-[#C85A32] transition-all" />
+                <div className="absolute -left-[31px] sm:-left-[39px] top-1 w-3.5 h-3.5 rounded-full bg-[#F5EFE6] dark:bg-[#141619] border-2 border-[#C85A32] group-hover:scale-125 group-hover:bg-[#C85A32] transition-all" />
 
                 <div className="space-y-1">
                   <div className="flex flex-wrap items-baseline gap-2">
                     <span className="text-xs font-mono font-bold text-[#C85A32] uppercase tracking-wider">
                       {epoch.era}
                     </span>
-                    <span className="text-xs text-[#8C5B3E] font-medium hidden sm:inline">•</span>
-                    <h4 className="text-base sm:text-lg font-serif font-bold text-[#14171A] group-hover:text-[#C85A32] transition-colors">
+                    <span className="text-xs text-[#8C5B3E] dark:text-[#E0A882] font-medium hidden sm:inline">•</span>
+                    <h4 className="text-base sm:text-lg font-serif font-bold text-[#14171A] dark:text-[#F5F1E8] group-hover:text-[#C85A32] transition-colors">
                       {epoch.title}
                     </h4>
                   </div>
                   
-                  <div className="text-xs font-hindi-text text-[#8C5B3E]">
+                  <div className="text-xs font-hindi-text text-[#8C5B3E] dark:text-[#E0A882]">
                     {epoch.hindiTitle}
                   </div>
 
-                  <p className="text-xs sm:text-sm text-[#4B525A] font-light leading-relaxed pt-0.5">
+                  <p className="text-xs sm:text-sm text-[#4B525A] dark:text-[#C8BFB4] font-light leading-relaxed pt-0.5">
                     {epoch.description}
                   </p>
                 </div>
@@ -135,7 +135,7 @@ export const HistoryTimelineSection: React.FC<HistoryTimelineSectionProps> = ({
             <div className="pt-4">
               <button
                 onClick={onNavigateHistory}
-                className="px-6 py-2.5 rounded-full bg-[#1E2124] hover:bg-black text-white text-xs font-semibold tracking-wide transition-all shadow-md flex items-center gap-2"
+                className="px-6 py-2.5 rounded-full bg-[#1E2124] dark:bg-[#2C3138] hover:bg-black dark:hover:bg-[#3D454F] text-white text-xs font-semibold tracking-wide transition-all shadow-md flex items-center gap-2"
               >
                 <span>Explore Bihar’s history →</span>
               </button>
