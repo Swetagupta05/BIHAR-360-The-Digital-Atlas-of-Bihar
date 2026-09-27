@@ -18,6 +18,11 @@ import { District } from './types';
 import { ShieldCheck, Heart, Sparkles, MapPin } from 'lucide-react';
 import { HomePage } from './components/HomePage';
 import { DistrictDossierView } from './components/dossier/DistrictDossierView';
+import { MusicView } from './components/MusicView';
+import { LanguagesView } from './components/LanguagesView';
+import { HistoryView } from './components/HistoryView';
+import { GlobalMusicPlayer } from './components/music/GlobalMusicPlayer';
+import { MusicPlayerProvider } from './context/MusicPlayerContext';
 
 export default function App() {
   const [activeTab, setActiveTab] = React.useState<string>('home');
@@ -139,7 +144,8 @@ export default function App() {
   const bookmarkedDistricts = ALL_DISTRICTS.filter(d => bookmarkedIds.includes(d.id));
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#FBF9F5] dark:bg-[#0F1113] text-[#1E2124] dark:text-[#F5F1E8] selection:bg-[#C85A32]/20 transition-colors duration-200">
+    <MusicPlayerProvider>
+      <div className="min-h-screen flex flex-col bg-[#FBF9F5] dark:bg-[#0F1113] text-[#1E2124] dark:text-[#F5F1E8] selection:bg-[#C85A32]/20 transition-colors duration-200">
       {/* Navigation Header */}
       <Navbar
         activeTab={activeTab}
@@ -195,6 +201,16 @@ export default function App() {
             />
           )}
 
+          {activeTab === 'history' && (
+            <HistoryView
+              language={language}
+              onNavigateTab={handleTabChange}
+              onSelectDistrictById={handleOpenDossierById}
+              onSelectPersonality={() => setActiveTab('personalities')}
+              onSelectHeritageSite={() => setActiveTab('heritage')}
+            />
+          )}
+
           {activeTab === 'heritage' && (
             <HeritageView
               language={language}
@@ -203,7 +219,11 @@ export default function App() {
           )}
 
           {activeTab === 'cuisine' && (
-            <CuisineView language={language} />
+            <CuisineView
+              language={language}
+              onNavigateTab={handleTabChange}
+              onSelectDistrictById={handleOpenDossierById}
+            />
           )}
 
           {activeTab === 'arts' && (
@@ -238,7 +258,28 @@ export default function App() {
           )}
 
           {activeTab === 'circuits' && (
-            <ItinerariesView language={language} />
+            <ItinerariesView
+              language={language}
+              onSelectDistrictById={handleOpenDossierById}
+              onNavigateTab={handleTabChange}
+            />
+          )}
+
+          {activeTab === 'music' && (
+            <MusicView
+              language={language}
+              onNavigateTab={handleTabChange}
+              onSelectDistrictById={handleOpenDossierById}
+            />
+          )}
+
+          {activeTab === 'languages' && (
+            <LanguagesView
+              language={language}
+              onNavigateTab={handleTabChange}
+              onSelectDistrictById={handleOpenDossierById}
+              onSelectPersonality={() => setActiveTab('personalities')}
+            />
           )}
         </main>
       )}
@@ -366,6 +407,13 @@ export default function App() {
           language={language}
         />
       )}
+
+      {/* Canonical Persistent Global Music Player */}
+      <GlobalMusicPlayer
+        onNavigateTab={handleTabChange}
+        onSelectDistrictById={handleOpenDossierById}
+      />
     </div>
+    </MusicPlayerProvider>
   );
 }

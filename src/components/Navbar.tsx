@@ -1,5 +1,5 @@
 import React from 'react';
-import { Search, Bookmark, Compass, Award, Menu, X, ChevronDown, Sparkles, Palette, Utensils, Calendar, Sun, Moon } from 'lucide-react';
+import { Search, Bookmark, Compass, Award, Menu, X, ChevronDown, Sparkles, Palette, Utensils, Calendar, Sun, Moon, Music, Radio, BookOpen, History, Landmark } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
 
 interface NavbarProps {
@@ -82,24 +82,50 @@ export const Navbar: React.FC<NavbarProps> = ({
               Districts (38)
             </button>
 
-            {/* 3. Stories (Heritage & History) */}
-            <button
-              id="nav-link-heritage"
-              onClick={() => setActiveTab('heritage')}
-              className={`px-3.5 py-2 rounded-full text-xs font-semibold tracking-wide transition-all ${
-                activeTab === 'heritage' || activeTab === 'personalities'
-                  ? 'bg-[#14171A] text-white dark:bg-[#F5F1E8] dark:text-[#0F1113] shadow-sm'
-                  : 'text-[#2D3238] dark:text-[#C8BFB4] hover:bg-[#F5EFE6] dark:hover:bg-[#1E2227] hover:text-[#14171A] dark:hover:text-white'
-              }`}
-            >
-              Stories & History
-            </button>
-
-            {/* 4. Culture Dropdown/Group (Arts, Cuisine, Festivals) */}
+            {/* 3. History & Heritage */}
             <div className="relative group">
               <button
                 className={`px-3.5 py-2 rounded-full text-xs font-semibold tracking-wide transition-all flex items-center gap-1 ${
-                  ['arts', 'cuisine', 'festivals'].includes(activeTab)
+                  ['history', 'heritage'].includes(activeTab)
+                    ? 'bg-[#14171A] text-white dark:bg-[#F5F1E8] dark:text-[#0F1113] shadow-sm'
+                    : 'text-[#2D3238] dark:text-[#C8BFB4] hover:bg-[#F5EFE6] dark:hover:bg-[#1E2227] hover:text-[#14171A] dark:hover:text-white'
+                }`}
+              >
+                <span>History & Heritage</span>
+                <ChevronDown className="w-3 h-3 opacity-70 group-hover:rotate-180 transition-transform" />
+              </button>
+
+              <div className="absolute top-full left-0 mt-1 w-60 bg-white dark:bg-[#1A1D22] rounded-2xl shadow-xl border border-[#EADBCE] dark:border-[#2E343B] p-2 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-150 z-50">
+                <button
+                  onClick={() => setActiveTab('history')}
+                  className={`w-full text-left px-3 py-2 rounded-xl text-xs flex items-center gap-2 transition-colors ${
+                    activeTab === 'history'
+                      ? 'bg-[#F5EFE6] dark:bg-[#252A30] text-[#C85A32] dark:text-[#E06C43] font-semibold'
+                      : 'text-[#2D3238] dark:text-[#C8BFB4] hover:bg-[#F5EFE6] dark:hover:bg-[#252A30]'
+                  }`}
+                >
+                  <History className="w-3.5 h-3.5 text-[#C85A32] dark:text-[#E06C43]" />
+                  <span>Bihar Through Time (History)</span>
+                </button>
+                <button
+                  onClick={() => setActiveTab('heritage')}
+                  className={`w-full text-left px-3 py-2 rounded-xl text-xs flex items-center gap-2 transition-colors ${
+                    activeTab === 'heritage'
+                      ? 'bg-[#F5EFE6] dark:bg-[#252A30] text-[#C85A32] dark:text-[#E06C43] font-semibold'
+                      : 'text-[#2D3238] dark:text-[#C8BFB4] hover:bg-[#F5EFE6] dark:hover:bg-[#252A30]'
+                  }`}
+                >
+                  <Landmark className="w-3.5 h-3.5 text-[#C85A32] dark:text-[#E06C43]" />
+                  <span>Monuments & Heritage</span>
+                </button>
+              </div>
+            </div>
+
+            {/* 4. Culture Dropdown/Group (Arts, Cuisine, Festivals, Music) */}
+            <div className="relative group">
+              <button
+                className={`px-3.5 py-2 rounded-full text-xs font-semibold tracking-wide transition-all flex items-center gap-1 ${
+                  ['arts', 'cuisine', 'festivals', 'music', 'languages'].includes(activeTab)
                     ? 'bg-[#14171A] text-white dark:bg-[#F5F1E8] dark:text-[#0F1113] shadow-sm'
                     : 'text-[#2D3238] dark:text-[#C8BFB4] hover:bg-[#F5EFE6] dark:hover:bg-[#1E2227] hover:text-[#14171A] dark:hover:text-white'
                 }`}
@@ -108,7 +134,18 @@ export const Navbar: React.FC<NavbarProps> = ({
                 <ChevronDown className="w-3 h-3 opacity-70 group-hover:rotate-180 transition-transform" />
               </button>
 
-              <div className="absolute top-full left-0 mt-1 w-52 bg-white dark:bg-[#1A1D22] rounded-2xl shadow-xl border border-[#EADBCE] dark:border-[#2E343B] p-2 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-150 z-50">
+              <div className="absolute top-full left-0 mt-1 w-56 bg-white dark:bg-[#1A1D22] rounded-2xl shadow-xl border border-[#EADBCE] dark:border-[#2E343B] p-2 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-150 z-50">
+                <button
+                  onClick={() => setActiveTab('languages')}
+                  className={`w-full text-left px-3 py-2 rounded-xl text-xs flex items-center gap-2 transition-colors ${
+                    activeTab === 'languages'
+                      ? 'bg-[#F5EFE6] dark:bg-[#252A30] text-[#C85A32] dark:text-[#E06C43] font-semibold'
+                      : 'text-[#2D3238] dark:text-[#C8BFB4] hover:bg-[#F5EFE6] dark:hover:bg-[#252A30]'
+                  }`}
+                >
+                  <BookOpen className="w-3.5 h-3.5 text-[#C85A32] dark:text-[#E06C43]" />
+                  <span>Languages & Voices</span>
+                </button>
                 <button
                   onClick={() => setActiveTab('arts')}
                   className={`w-full text-left px-3 py-2 rounded-xl text-xs flex items-center gap-2 transition-colors ${
@@ -141,6 +178,17 @@ export const Navbar: React.FC<NavbarProps> = ({
                 >
                   <Calendar className="w-3.5 h-3.5 text-[#C85A32] dark:text-[#E06C43]" />
                   <span>Festivals & Traditions</span>
+                </button>
+                <button
+                  onClick={() => setActiveTab('music')}
+                  className={`w-full text-left px-3 py-2 rounded-xl text-xs flex items-center gap-2 transition-colors ${
+                    activeTab === 'music'
+                      ? 'bg-[#F5EFE6] dark:bg-[#252A30] text-[#C85A32] dark:text-[#E06C43] font-semibold'
+                      : 'text-[#2D3238] dark:text-[#C8BFB4] hover:bg-[#F5EFE6] dark:hover:bg-[#252A30]'
+                  }`}
+                >
+                  <Music className="w-3.5 h-3.5 text-[#C85A32] dark:text-[#E06C43]" />
+                  <span>Hear Bihar (Music & Sound)</span>
                 </button>
                 <button
                   onClick={() => setActiveTab('personalities')}
@@ -191,7 +239,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                   }`}
                 >
                   <Sparkles className="w-3.5 h-3.5 text-[#C85A32] dark:text-[#E06C43]" />
-                  <span>Travel Circuits</span>
+                  <span>Journeys Through Bihar</span>
                 </button>
                 <button
                   onClick={() => setActiveTab('map')}
@@ -335,6 +383,20 @@ export const Navbar: React.FC<NavbarProps> = ({
 
             <button
               onClick={() => {
+                setActiveTab('history');
+                setMobileMenuOpen(false);
+              }}
+              className={`w-full text-left px-4 py-2.5 rounded-xl text-sm font-semibold flex items-center justify-between transition-colors ${
+                activeTab === 'history'
+                  ? 'bg-[#14171A] text-white dark:bg-[#F5F1E8] dark:text-[#0F1113]'
+                  : 'text-[#14171A] dark:text-[#F5F1E8] hover:bg-[#F5EFE6] dark:hover:bg-[#1E2227]'
+              }`}
+            >
+              <span>Bihar Through Time (History)</span>
+            </button>
+
+            <button
+              onClick={() => {
                 setActiveTab('heritage');
                 setMobileMenuOpen(false);
               }}
@@ -344,7 +406,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                   : 'text-[#14171A] dark:text-[#F5F1E8] hover:bg-[#F5EFE6] dark:hover:bg-[#1E2227]'
               }`}
             >
-              <span>Stories & Monuments</span>
+              <span>Monuments & Heritage</span>
             </button>
 
             <button
@@ -391,6 +453,34 @@ export const Navbar: React.FC<NavbarProps> = ({
 
             <button
               onClick={() => {
+                setActiveTab('music');
+                setMobileMenuOpen(false);
+              }}
+              className={`w-full text-left px-4 py-2.5 rounded-xl text-sm font-semibold flex items-center justify-between transition-colors ${
+                activeTab === 'music'
+                  ? 'bg-[#14171A] text-white dark:bg-[#F5F1E8] dark:text-[#0F1113]'
+                  : 'text-[#14171A] dark:text-[#F5F1E8] hover:bg-[#F5EFE6] dark:hover:bg-[#1E2227]'
+              }`}
+            >
+              <span>Hear Bihar (Music & Sound)</span>
+            </button>
+
+            <button
+              onClick={() => {
+                setActiveTab('languages');
+                setMobileMenuOpen(false);
+              }}
+              className={`w-full text-left px-4 py-2.5 rounded-xl text-sm font-semibold flex items-center justify-between transition-colors ${
+                activeTab === 'languages'
+                  ? 'bg-[#14171A] text-white dark:bg-[#F5F1E8] dark:text-[#0F1113]'
+                  : 'text-[#14171A] dark:text-[#F5F1E8] hover:bg-[#F5EFE6] dark:hover:bg-[#1E2227]'
+              }`}
+            >
+              <span>Languages & Voices</span>
+            </button>
+
+            <button
+              onClick={() => {
                 setActiveTab('personalities');
                 setMobileMenuOpen(false);
               }}
@@ -428,7 +518,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                   : 'text-[#14171A] dark:text-[#F5F1E8] hover:bg-[#F5EFE6] dark:hover:bg-[#1E2227]'
               }`}
             >
-              <span>Travel Circuits</span>
+              <span>Journeys Through Bihar</span>
             </button>
 
             <button

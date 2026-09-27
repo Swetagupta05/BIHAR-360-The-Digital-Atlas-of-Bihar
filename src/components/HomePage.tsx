@@ -54,12 +54,12 @@ export const HomePage: React.FC<HomePageProps> = ({
 
       {/* 3. Bihar Through Time ("बिहार — समय के पार") */}
       <HistoryTimelineSection
-        onNavigateHistory={() => onNavigateTab('heritage')}
+        onNavigateHistory={() => onNavigateTab('history')}
       />
 
       {/* 4. Hear Bihar ("सुनिए बिहार को") */}
       <HearBiharSection
-        onNavigateTraditions={() => onNavigateTab('arts')}
+        onNavigateTraditions={() => onNavigateTab('music')}
       />
 
       {/* 5. Taste Bihar ("स्वाद से पहचानिए बिहार") */}

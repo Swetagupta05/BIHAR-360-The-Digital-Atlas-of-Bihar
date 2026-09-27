@@ -164,20 +164,6 @@ export interface Place {
   source: string;
 }
 
-export interface HistoricalEvent {
-  id: string;
-  period: string;
-  eraName: string;
-  yearRange: string;
-  title: string;
-  description: string;
-  keyFigures: string[];
-  keyLocations: string[];
-  significance: string;
-  image: string;
-  sources: string;
-}
-
 export interface LanguageInfo {
   name: string;
   nativeScript: string;
@@ -357,19 +343,76 @@ export interface HeritageSite {
   museumDoc?: HeritageSiteDetail;
 }
 
+export type CulinaryRegion =
+  | 'Bhojpur'
+  | 'Magadh'
+  | 'Mithila'
+  | 'Tirhut'
+  | 'Saran'
+  | 'Anga'
+  | 'Statewide';
+
+export type FoodSeason = 'Winter' | 'Summer' | 'Monsoon' | 'Year-round' | 'Festive Seasons';
+
 export interface Dish {
   id: string;
   name: string;
   hindiName: string;
+  region?: CulinaryRegion;
   originDistrict: string;
+  districts?: string[];
+  districtNames?: string[];
   category: string;
   isVegetarian: boolean;
   giTag: boolean;
   image: string;
+  imageSource?: string;
   description: string;
   ingredients: string[];
   preparationMethod: string;
   culturalContext: string;
+  whenEaten?: string;
+  season?: FoodSeason;
+  festivalConnections?: string[];
+  festivalNames?: string[];
+  sources?: string[];
+  relatedFoods?: string[];
+  relatedPlaces?: string[];
+  isSignature?: boolean;
+}
+
+export interface CulinaryIngredient {
+  id: string;
+  name: string;
+  hindiName: string;
+  tagline: string;
+  landscapeConnection: string;
+  agriculturalSeason: string;
+  stapleRegions: string[];
+  dishesUsedIn: string[];
+  culturalRole: string;
+  iconType: string;
+}
+
+export interface CulinarySeasonProfile {
+  id: FoodSeason;
+  title: string;
+  hindiTitle: string;
+  months: string;
+  concept: string;
+  description: string;
+  featuredDishIds: string[];
+  staples: string[];
+}
+
+export interface CulinaryRegionProfile {
+  id: CulinaryRegion;
+  name: string;
+  hindiName: string;
+  districts: string[];
+  flavorProfile: string;
+  narrative: string;
+  signatureDishes: string[];
 }
 
 export interface ArtCraftProcessStep {
@@ -548,19 +591,6 @@ export interface ModernDevelopment {
   source: string;
 }
 
-export interface MusicTrack {
-  id: string;
-  title: string;
-  artist: string;
-  category: 'Bhojpuri Folk' | 'Maithili Traditions' | 'Magahi Traditions' | 'Chhath & Festival Geet' | 'Classical & Shehnai' | 'Kajari & Biraha';
-  description: string;
-  youtubeVideoId: string;
-  duration: string;
-  language: string;
-  districtAssociation: string;
-  coverImage?: string;
-}
-
 export interface ItineraryDay {
   dayNumber: number;
   title: string;
@@ -580,11 +610,278 @@ export interface Itinerary {
   days: ItineraryDay[];
 }
 
+export type JourneyTheme =
+  | 'history'
+  | 'spiritual'
+  | 'food'
+  | 'arts'
+  | 'nature'
+  | 'festivals'
+  | 'freedom'
+  | 'literature'
+  | 'architecture';
+
+export interface JourneyStop {
+  stopNumber: number;
+  dayNumber: number;
+  placeName: string;
+  hindiPlaceName?: string;
+  districtId: string;
+  districtName: string;
+  region: string;
+  headline: string;
+  narrative: string;
+  whatToExperience: string[];
+  culinaryHighlight?: {
+    dishName: string;
+    description: string;
+    foodId?: string;
+  };
+  musicRecommendation?: {
+    trackId: string;
+    title: string;
+    genre: string;
+    artist?: string;
+  };
+  languageSpoken: string;
+  historicalContext?: string;
+  practicalTips: string;
+  travelTransit: string;
+  image?: string;
+}
+
+export interface CuratedJourney {
+  id: string;
+  title: string;
+  hindiTitle: string;
+  tagline: string;
+  hindiTagline: string;
+  theme: JourneyTheme;
+  themeLabel: string;
+  themeColor: string;
+  durationDays: number;
+  totalStops: number;
+  districts: string[];
+  districtNames: string[];
+  regions: string[];
+  bestSeason: string;
+  pace: 'Relaxed' | 'Moderate' | 'Expedition';
+  heroImage: string;
+  storyNarrative: string;
+  whyThisRoute: string;
+  stops: JourneyStop[];
+  culinaryTraditions: string[];
+  craftTraditions: string[];
+  connectedEras: string[];
+  travelAdvisories: string[];
+  sources: string[];
+}
+
 export interface BookmarkItem {
   id: string;
-  type: 'district' | 'place' | 'food' | 'festival' | 'personality' | 'art' | 'music';
+  type: 'district' | 'place' | 'food' | 'festival' | 'personality' | 'art' | 'music' | 'journey';
   title: string;
   subtitle: string;
   link: string;
   savedAt: number;
+}
+
+export type MusicCategory =
+  | 'folk'
+  | 'festival'
+  | 'lifecycle'
+  | 'devotional'
+  | 'classical'
+  | 'theatre'
+  | 'contemporary';
+
+export type MusicRegion =
+  | 'mithila'
+  | 'bhojpur'
+  | 'magadh'
+  | 'anga'
+  | 'statewide';
+
+export type CompositionType =
+  | 'traditional_folk'
+  | 'classical_repertoire'
+  | 'court_tradition'
+  | 'devotional_hymn'
+  | 'contemporary_rendition';
+
+export type TraditionType = CompositionType;
+
+export interface MusicTrack {
+  id: string;
+  title: string;
+  hindiTitle: string;
+  performer: string;
+  tradition: string;
+  traditionType: CompositionType;
+  category: MusicCategory;
+  language: string;
+  region: MusicRegion;
+  regionDisplay: string;
+  districtId?: string;
+  districtName?: string;
+  youtubeId: string;
+  youtubeUrl: string;
+  durationMinutes: string;
+  culturalContext: string;
+  description: string;
+  instruments: string[];
+  festivalId?: string;
+  personalityId?: string;
+  placeId?: string;
+  source: string;
+  coverImage?: string;
+}
+
+export interface MusicCollection {
+  id: string;
+  title: string;
+  hindiTitle: string;
+  subtitle: string;
+  category: MusicCategory | 'all';
+  description: string;
+  trackIds: string[];
+}
+
+export type LanguageOfficialStatus =
+  | 'Eighth Schedule Recognized Language (Constitution of India)'
+  | 'Principal Official Language of the State'
+  | 'Second Official Language of the State'
+  | 'Recognized Regional Literary Language'
+  | 'Documented Speech Variety / Regional Variety';
+
+export interface LocalizedTopicText {
+  en: string;
+  hi: string;
+  mai?: string;
+  bho?: string;
+  mag?: string;
+  an?: string;
+  ur?: string;
+}
+
+export interface ScriptProfile {
+  id: string;
+  name: string;
+  hindiName: string;
+  nativeSample: string;
+  nativeSampleTranslation: string;
+  languagesAssociated: string[];
+  historicalEra: string;
+  statusToday: string;
+  description: string;
+  culturalNote: string;
+  unicodeRange?: string;
+  visualGlyphs: Array<{ char: string; roman: string; name: string }>;
+}
+
+export interface LanguageOralTradition {
+  title: string;
+  hindiTitle?: string;
+  description: string;
+  genre: string;
+  culturalContext: string;
+  musicTrackId?: string;
+}
+
+export interface LanguageNotableFigure {
+  name: string;
+  period: string;
+  role: string;
+  personalityId?: string;
+  notableWorks: string[];
+  contribution: string;
+}
+
+export interface LanguageProfile {
+  id: string;
+  name: string;
+  localName: string;
+  category: 'Constitutional Language' | 'Official State Language' | 'Regional Literary Language' | 'Documented Speech Variety';
+  classification: string;
+  scholarlyClassificationNote: string;
+  officialStatus: LanguageOfficialStatus;
+  primaryRegions: Region[];
+  associatedDistricts: string[];
+  traditionalScripts: string[];
+  primaryScript: string;
+  overview: string;
+  literaryTradition: string;
+  oralTraditions: LanguageOralTradition[];
+  notableFigures: LanguageNotableFigure[];
+  festivalConnections: Array<{
+    festivalId: string;
+    festivalName: string;
+    role: string;
+  }>;
+  musicTrackIds: string[];
+  samplePhrase: {
+    text: string;
+    script: string;
+    meaning: string;
+    context: string;
+  };
+  sampleLiteraryPassage?: {
+    workTitle: string;
+    author: string;
+    originalText: string;
+    script: string;
+    translations: LocalizedTopicText;
+    commentary: string;
+  };
+  censusNote: string;
+  sources: string[];
+}
+
+export type HistoricalEvidenceType =
+  | 'Archaeological Excavation'
+  | 'Epigraphic Inscription'
+  | 'Numismatic Record'
+  | 'Contemporary Manuscript / Chronicle'
+  | 'Archival Document'
+  | 'Architectural Monument';
+
+export interface HistoricalEvent {
+  id: string;
+  title: string;
+  hindiTitle: string;
+  eraId: string;
+  dateLabel: string;
+  approximateYear?: string;
+  location: string;
+  historicalRegion: string;
+  districtId?: string;
+  keyActors: string[];
+  description: string;
+  evidenceType: HistoricalEvidenceType;
+  survivingEvidence: string;
+  whatRemainsToday: string;
+  heritageSiteId?: string;
+  placeId?: string;
+  personalityId?: string;
+  sources: string[];
+  image?: string;
+  imageCaption?: string;
+}
+
+export interface HistoricalEra {
+  id: string;
+  title: string;
+  hindiTitle: string;
+  period: string;
+  startYearOrder: number;
+  dateLabel: string;
+  summary: string;
+  hindiSummary: string;
+  historicalGeography: string;
+  keyThemes: string[];
+  events: HistoricalEvent[];
+  survivingLandmarks: string[];
+  relatedRegions: Region[];
+  sources: string[];
+  coverImage?: string;
 }
