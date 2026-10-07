@@ -1,0 +1,120 @@
+import { District } from '../../types';
+
+export const MITHILA_DISTRICTS: District[] = [
+  {
+    id: 'madhubani',
+    name: 'Madhubani',
+    hindiName: 'मधुबनी',
+    slug: 'madhubani',
+    region: 'Mithila',
+    headquarters: 'Madhubani',
+    areaSqKm: 3501,
+    populationApprox: '4.48 Million',
+    literacyRate: '58.62%',
+    sexRatio: '945',
+    coordinates: { lat: 26.3537, lng: 86.0719 },
+    svgGridLocation: { x: 55, y: 26 },
+    heroImage: '',
+    overview: 'The cultural citadel of Mithila civilization, world-renowned as the cradle of Madhubani (Mithila) art, ponds of water lilies, and succulent Foxnuts (Makhana).',
+    whyItMatters: 'Preserves the living tradition of ritual wall and paper painting celebrated across Tokyo, Paris, and New York, alongside Vedic scholarly assemblies.',
+    history: 'Historic core of King Janaka’s Mithila empire mentioned in the Ramayana. Known for centuries of intellectual assemblies (Sabha Gachhi at Saurath).',
+    geography: 'Northern floodplains crisscrossed by rivers Kamla and Balan, rich with thousands of traditional village ponds (Pokhars).',
+    culture: 'Maithili language, Kohbar wedding paintings, devotional songs of Mahakavi Vidyapati, and the festive ritual of Sama-Chakeva.',
+    languages: ['Maithili', 'Hindi'],
+    famousFor: ['Mithila / Madhubani Painting', 'Mithila Makhana (GI Tag)', 'Saurath Sabha', 'Kapileshwar Sthan', 'Uchaitha Bhagwati'],
+    importantPlaces: [
+      { name: 'Jitwarpur & Ranti Villages', description: 'Living artisan villages where almost every home is an open gallery of Madhubani painting master artists.', tag: 'Culture' },
+      { name: 'Saurath', description: 'Ancient groves where genealogists (Panjikars) held traditional marriage assemblies for centuries.', tag: 'Heritage' },
+      { name: 'Kapileshwar Sthan', description: 'Ancient Shiva temple believed to have been consecrated by Sage Kapila of Sankhya philosophy.', tag: 'Spiritual' },
+      { name: 'Uchaitha Sthan', description: 'Sacred grove of Goddess Durga where legend says poet Kalidasa received wisdom.', tag: 'Historical' }
+    ],
+    food: [
+      { name: 'Makhana Kheer', description: 'Puffed lotus seed pudding simmered with reduced whole milk, cardamom, and saffron.' },
+      { name: 'Machh-Bhaat', description: 'Freshwater Rohu fish in mustard gravy paired with steamed fragrant rice.' }
+    ],
+    festivals: ['Sama-Chakeva', 'Madhushravani', 'Chhath Puja', 'Durga Puja', 'Jud Shital'],
+    artsAndCrafts: ['Madhubani Painting (Bharni, Kachni, Tantrik, Godna styles)', 'Sikki Grass Craft'],
+    notablePeople: ['Sita Devi (National Master Painter)', 'Mahasundari Devi', 'Baua Devi', 'Ganga Devi'],
+    agriculture: ['Mithila Makhana (Foxnut)', 'Paddy', 'Mango', 'Betel Vine'],
+    economy: 'Art export, Makhana processing and global exports, fisheries, and agro-based cottage enterprises.',
+    travelTips: ['Visit Jitwarpur village to directly witness master artisans dipping bamboo pens into natural vegetable dyes.', 'Sample roasted Makhana directly from harvest hubs.'],
+    sourceAttribution: { sourceName: 'Crafts Council of India & Ministry of Textiles, Govt. of India', verifiedYear: 2024 }
+  },
+  {
+    id: 'darbhanga',
+    name: 'Darbhanga',
+    hindiName: 'दरभंगा',
+    slug: 'darbhanga',
+    region: 'Mithila',
+    headquarters: 'Darbhanga',
+    areaSqKm: 2279,
+    populationApprox: '3.93 Million',
+    literacyRate: '56.88%',
+    sexRatio: '911',
+    coordinates: { lat: 26.1542, lng: 85.8918 },
+    svgGridLocation: { x: 50, y: 32 },
+    heroImage: '',
+    overview: 'The royal and musical capital of Mithila, famed for the royal Darbhanga Raj palaces, deep water ponds, Makhana harvesting, and Darbhanga Dhrupad gharana.',
+    whyItMatters: 'Seat of the grand Khandavala dynasty (Darbhanga Raj) who were premier patrons of Indian classical music, Sanskrit scholarship, and universities.',
+    history: 'Derived from "Dwar-Banga" (Gate to Bengal). Maharajas of Darbhanga were one of India’s wealthiest royal lineages who endowed BHU, Calcutta University, and Patna University.',
+    geography: 'Flat alluvium drained by Bagmati, Kamla, and Little Bagmati rivers, punctuated by hundreds of heritage royal ponds.',
+    culture: 'Mithila classical culture, Darbhanga Dhrupad musical school, Sanskrit studies at Kameshwar Singh Darbhanga Sanskrit University, and vivid Maithili theater.',
+    languages: ['Maithili', 'Hindi', 'Urdu'],
+    famousFor: ['Raj Darbhanga Palaces (Nargona & Anand Bagh)', 'Shyama Mai Temple', 'Darbhanga Airport', 'Mithila Makhana', 'Darbhanga Dhrupad'],
+    importantPlaces: [
+      { name: 'Raj Darbhanga Fort & Palaces', description: 'Red brick royal fortress containing the Anand Bagh Palace, Nargona Palace, and royal library.', tag: 'Heritage' },
+      { name: 'Shyama Mai Temple', description: 'Spectacular Kali temple constructed over the royal pyre of Maharaja Rameshwar Singh atop a lotus platform.', tag: 'Spiritual' },
+      { name: 'Chandradhari Museum', description: 'Houses dazzling personal royal treasures, jade statues, ivory carvings, and rare coin collections.', tag: 'Museum' },
+      { name: 'Kusheshwar Asthan Bird Sanctuary', description: 'Sprawling wetland lake haven hosting Siberian cranes, bar-headed geese, and water birds in winter.', tag: 'Nature' }
+    ],
+    food: [
+      { name: 'Makhana Chaat & Kheer', description: 'Roasted crunchy makhana seasoned with rock salt and desi ghee, alongside chilled makhana kheer.' },
+      { name: 'Maithili Thali', description: 'Steamed rice, arhar dal, parwal bhujia, chane ki saag, and mustard fish curry.' }
+    ],
+    festivals: ['Kojagara (Festival of Makhana and Paan)', 'Chhath Puja', 'Shyama Mai Sangeet Mahotsav', 'Sama-Chakeva'],
+    artsAndCrafts: ['Madhubani Painting', 'Sikki craft baskets and decorative elephants'],
+    notablePeople: ['Maharaja Lakshmeshwar Singh', 'Maharaja Kameshwar Singh', 'Mallik Brothers (Dhrupad maestros)'],
+    agriculture: ['Makhana', 'Paddy', 'Mango (Malda)', 'Fish Aquaculture'],
+    economy: 'Makhana processing and exports, educational institutions, civil airport hub, and agro-commerce.',
+    travelTips: ['Spend an evening at the tranquil lawns of Shyama Mai Temple during sandhya aarti.', 'Darbhanga Airport offers direct flights from Delhi, Mumbai, and Bengaluru.'],
+    sourceAttribution: { sourceName: 'Darbhanga District Gazetteer & Ministry of Civil Aviation', verifiedYear: 2024 }
+  },
+  {
+    id: 'samastipur',
+    name: 'Samastipur',
+    hindiName: 'समस्तीपुर',
+    slug: 'samastipur',
+    region: 'Mithila',
+    headquarters: 'Samastipur',
+    areaSqKm: 2904,
+    populationApprox: '4.26 Million',
+    literacyRate: '61.86%',
+    sexRatio: '911',
+    coordinates: { lat: 25.8628, lng: 85.7811 },
+    svgGridLocation: { x: 50, y: 44 },
+    heroImage: '',
+    overview: 'The railway junction and agricultural university nexus of Bihar, home to India’s first agricultural research institute at Pusa (RPCAU).',
+    whyItMatters: 'Dr. Rajendra Prasad Central Agricultural University at Pusa pioneered the Indian agricultural green revolution and tobacco/wheat crop research.',
+    history: 'Pusa was selected in 1905 with assistance from American philanthropist Henry Phipps to establish the Imperial Agricultural Research Institute.',
+    geography: 'Traversed by the Burhi Gandak, Bagmati, and Baya rivers, generating extraordinarily fertile loam.',
+    culture: 'Mithila cultural sphere, vibrant peasant movements, and sweet water fish culture.',
+    languages: ['Maithili', 'Hindi'],
+    famousFor: ['Dr. RP Central Agricultural University Pusa', 'Morwa Shiva Temple', 'Vidyapati Nagar', 'Major Railway Division'],
+    importantPlaces: [
+      { name: 'Dr. RPCAU Campus Pusa', description: 'Historic botanical gardens, colonial red brick institutes, and heritage agricultural museums.', tag: 'Heritage' },
+      { name: 'Vidyapati Dham (Bisfi/Vidyapatinagar)', description: 'Sacred memorial temple where poet Vidyapati took his samadhi on the banks of the Ganga.', tag: 'Spiritual' },
+      { name: 'Morwa Khudneshwar Sthan', description: 'Unique syncretic shrine where a Shiva lingam is worshiped alongside a Muslim saint’s mazar.', tag: 'Spiritual' }
+    ],
+    food: [
+      { name: 'Pusa Sugarcane Juice', description: 'Freshly pressed cane juice with black salt and ginger from experimental farm plots.' },
+      { name: 'Fish Curry with Steamed Rice', description: 'River Katla in mustard and garlic paste.' }
+    ],
+    festivals: ['Vidyapati Mahotsav', 'Kisan Mela Pusa', 'Chhath Puja'],
+    artsAndCrafts: ['Sikki grass work', 'Bamboo craft'],
+    notablePeople: ['Mahakavi Vidyapati', 'Karpoori Thakur (Bharat Ratna, born in Pitaunjhia/Karpoori Gram)'],
+    agriculture: ['Sugarcane', 'Tobacco', 'Paddy', 'Wheat', 'Maize', 'Vegetables'],
+    economy: 'Indian Railways Divisional Headquarters, agricultural education, sugar factories, and seed production.',
+    travelTips: ['Visit the heritage Pusa campus during the annual Spring All-India Kisan Mela.'],
+    sourceAttribution: { sourceName: 'Dr. RP Central Agricultural University & Ministry of Railways', verifiedYear: 2024 }
+  }
+];

@@ -1,0 +1,106 @@
+import React, { useState, useEffect } from 'react';
+import { HERITAGE_SITES, getHeritageSiteById } from '../../data/heritage';
+import { HeritageHero } from '../../components/heritage/HeritageHero';
+import { HeritageCategories } from '../../components/heritage/HeritageCategories';
+import { HeritageFeatured } from '../../components/heritage/HeritageFeatured';
+import { HeritageTimeline } from '../../components/heritage/HeritageTimeline';
+import { HeritageMap } from '../../components/heritage/HeritageMap';
+import { HeritageArchive } from '../../components/heritage/HeritageArchive';
+import { HeritageSiteDetailModal } from '../../components/heritage/HeritageSiteDetailModal';
+
+export const HeritageView = ({
+  language = 'en',
+  onSelectDistrict
+}) => {
+  const [selectedCategoryId, setSelectedCategoryId] = useState('all');
+  const [activeSiteStory, setActiveSiteStory] = useState(null);
+
+  // Check URL params for deep-linking (e.g. ?heritage=site-slug)
+  useEffect(() => {
+    try {
+      const params = new URLSearchParams(window.location.search);
+      const heritageParam = params.get('heritage');
+      if (heritageParam) {
+        const found = getHeritageSiteById(heritageParam);
+        if (found) {
+          setActiveSiteStory(found);
+        }
+      }
+    } catch {
+      // ignore
+    }
+  }, []);
+
+  const handleScrollToSection = (sectionId) => {
+    const el = document.getElementById(sectionId);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
+  const handleOpenFeatured = (siteId) => {
+    const site = getHeritageSiteById(siteId);
+    if (site) {
+      setActiveSiteStory(site);
+    }
+  };
+
+  return (
+    <div className="space-y-12 sm:space-y-16 pb-12">
+      {/* 1. Cinematic Heritage Hero */}
+      <HeritageHero
+        onOpenFeatured={handleOpenFeatured}
+        onScrollToSection={handleScrollToSection}
+        language={language}
+      />
+
+      {/* 2. Curatorial Categories & Departments */}
+      <HeritageCategories
+        selectedCategoryId={selectedCategoryId}
+        onSelectCategory={setSelectedCategoryId}
+        language={language}
+      />
+
+      {/* 3. Featured Heritage: Places That Changed History */}
+      <HeritageFeatured
+        sites={HERITAGE_SITES}
+        onOpenSite={setActiveSiteStory}
+        language={language}
+      />
+
+      {/* 4. Archaeological & Expedition Map */}
+      <HeritageMap
+        sites={HERITAGE_SITES}
+        onOpenSite={setActiveSiteStory}
+        language={language}
+      />
+
+      {/* 5. Chronicles in Stone: Civilizational Timeline */}
+      <HeritageTimeline
+        sites={HERITAGE_SITES}
+        onOpenSite={setActiveSiteStory}
+        language={language}
+      />
+
+      {/* 6. Curated Archaeological Registry & Catalogue */}
+      <HeritageArchive
+        sites={HERITAGE_SITES}
+        selectedCategoryId={selectedCategoryId}
+        onOpenSite={setActiveSiteStory}
+        onSelectDistrict={onSelectDistrict}
+        language={language}
+      />
+
+      {/* 7. Dedicated Exhibition Story Modal */}
+      {activeSiteStory && (
+        <HeritageSiteDetailModal
+          site={activeSiteStory}
+          onClose={() => setActiveSiteStory(null)}
+          onOpenSite={setActiveSiteStory}
+          onSelectDistrict={onSelectDistrict}
+          language={language}
+        />
+      )}
+    </div>
+  );
+};
